@@ -1,0 +1,14 @@
+
+
+# Composer
+/vendor/
+/var/cache/
+/var/log/
+/var/tmp/
+/node_modules/
+/public/assets/
+/.env.local
+/.idea
+.DS_Store
+
+
