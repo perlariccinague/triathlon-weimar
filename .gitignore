@@ -1,14 +1,30 @@
-
+# Configuration
+/.env.local
 
 # Composer
 /vendor/
+
+# Contao Manager
+/contao-manager/
+
+# Generated folders (ne pas versionner)
 /var/cache/
 /var/log/
 /var/tmp/
 /node_modules/
 /public/assets/
-/.env.local
+
+# Contao specific folders
+/assets/
+/files/
+/templates/
+/system/*
+!/system/config/
+!/system/config/localconfig.php
+
+# IDE / OS files
 /.idea
 .DS_Store
 
-
+# Skip files
+/system/modules/*/.skip
