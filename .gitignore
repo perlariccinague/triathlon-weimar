@@ -15,9 +15,9 @@
 /public/assets/
 
 # Contao specific folders
-/assets/
-/files/
-/templates/
+/assets/          # générés, pas versionnés
+/files/           # versionnés car tu as ajouté header.css et autres assets
+/templates/       # versionnés pour tes templates
 /system/*
 !/system/config/
 !/system/config/localconfig.php
