@@ -1,5 +1,8 @@
 #header {
     background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     color: white;
     padding: 20px;
 }
@@ -83,6 +86,32 @@
     }
 }
 
-.header-image figure video {
+.header-image {
+    position: relative;
     width: 100%;
+    figure video {
+        width: 100%;
+    }
+    .content-text {
+        text-align: left;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 90%;
+        max-width: 1100px;
+        top: 50%;
+        margin: 0;
+        color: white;
+        .rte {
+            max-width: 800px;
+            h1 {
+                font-size: 57px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
+    }
 }
