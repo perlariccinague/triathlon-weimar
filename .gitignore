@@ -1,37 +1,23 @@
+# Environnements locaux
+.env.local
+.env.*.local
+.env.local.php
 
-# ENVIRONMENT
-/.env.local
-
-# ===========================
-# COMPOSER
+# Dépendances
 /vendor/
+node_modules/
 
-# CONTAO MANAGER
-/contao-manager/
+# Cache / logs / backups
+/var/
+*.log
 
-
-# GENERATED FILES / CACHE
-/var/cache/
-/var/log/
-/var/tmp/
-/node_modules/
+# Fichiers générés / assets
 /public/assets/
+/public/bundles/
 /assets/
 
-# FILES TO VERSION
-/files/
-/templates/
-/system/config/
-!/system/config/localconfig.php
-
-# MODULES
-/system/modules/
-!/system/modules/*/
-
 # IDE / OS
-
-/.idea
+/.idea/
+.vscode/
 .DS_Store
-
-# CONTINUE SKIP RULES
-/system/modules/*/.skip
+Thumbs.db

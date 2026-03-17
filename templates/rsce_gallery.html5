@@ -1,0 +1,23 @@
+<div class="slider-teaser <?= htmlspecialchars($this->cssID) ?>">
+
+    <?php if ($this->link): ?>
+    <a href="<?= htmlspecialchars($this->link) ?>" target="_blank" rel="noopener noreferrer">
+        <?php endif; ?>
+
+        <?php if ($this->image && ($image = \Contao\FilesModel::findByUuid($this->image))): ?>
+        <img src="<?= $image->path ?>" alt="">
+        <?php endif; ?>
+
+        <div class="figcaption">
+            <?= $this->teaser ?>
+        </div>
+
+        <?php if ($this->icon && ($icon = \Contao\FilesModel::findByUuid($this->icon))): ?>
+        <img class="icon" src="<?= $icon->path ?>" alt="Icon">
+        <?php endif; ?>
+
+        <?php if ($this->link): ?>
+    </a>
+    <?php endif; ?>
+
+</div>
