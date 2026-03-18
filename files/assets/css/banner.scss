@@ -1,9 +1,11 @@
+@import "variables";
+
 .banner-box {
     background: #222;
     color: white;
     width: 90%;
     margin: -130px auto 0;
-    max-width: 1100px;
+    max-width: $max-width;
     padding: 75px 0 35px 0;
     z-index: 4;
     position: relative;
@@ -15,24 +17,20 @@
 }
 
 .banner-box .rte {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
 
 .banner-box {
     h2 {
-        font-size: 3.2rem;
         margin-bottom: 35px;
-        font-weight: 700;
         line-height: 1.2;
         position: relative;
         display: inline-block;
         text-transform: uppercase;
     }
-    p {
-        font-size: 1.6rem;
-    }
+
 }
 
 .banner-box h2::after {
@@ -41,7 +39,7 @@
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 910px;
+    width: 1000px;
     height: 4px;
     background: white;
 }

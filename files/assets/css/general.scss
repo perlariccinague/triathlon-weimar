@@ -1,0 +1,27 @@
+@import 'variables';
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font: normal italic 900 60px/70px 'Exo 2';
+}
+
+h3 {
+    font: normal italic 900 50px/60px 'Exo 2';
+}
+
+p, li {
+    font: normal normal 400 20px/30px 'Exo 2';
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
