@@ -1,0 +1,29 @@
+<div class="news-card layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+
+  <div class="news-inner">
+
+    <?php $this->block('info'); ?>
+    <div class="news-meta">
+      <time datetime="<?= $this->datetime ?>" class="news-date">
+        <?= date('d.m.Y', $this->timestamp) ?>
+      </time>
+    </div>
+    <?php $this->endblock(); ?>
+
+    <?php if ($this->addImage): ?>
+    <div class="news-image">
+      <?php $this->insert('image', $this->arrData); ?>
+    </div>
+    <?php endif; ?>
+
+    <h2 class="news-title">
+      <?= $this->linkHeadline ?>
+    </h2>
+
+    <div class="news-content ce_text">
+      <?= $this->cspInlineStyles($this->teaser) ?>
+    </div>
+
+  </div>
+
+</div>
