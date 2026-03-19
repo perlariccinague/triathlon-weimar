@@ -34,25 +34,16 @@
 }
 
 .banner-box h2::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
-    height: 4px;
     background: white;
 }
 
 
 .banner-box h2::before {
-    content: '';
-    position: absolute;
     bottom: -22px;
     left: 50%;
     transform: translateX(-50%);
     width: 420px;
-    height: 10px;
-    background: #f2c94c;
-    z-index: 1;
 }
