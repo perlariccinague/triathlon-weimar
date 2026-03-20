@@ -79,7 +79,7 @@
 }
 
 .event-card.kst .event-badge {
-  background-image: url('/files/assets/layout/logo-kst-pink.svg');
+  background-image: url('/files/assets/layout/logo-kst-pink.svg') ;
 }
 
 .event-content {
@@ -104,7 +104,7 @@
   color: white;
 }
 
-.event-card:hover .event-badge {
+.event-card:hover .event-badge, .event-card:hover .meta-item:before {
   filter: brightness(0) invert(1);
 }
 
@@ -122,24 +122,26 @@
 .meta-item {
   position: relative;
   padding-left: 22px;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .meta-item.date::before {
-  content: "📅";
-  position: absolute;
-  left: 0;
+  background: url('/files/assets/layout/date.svg') no-repeat ;
+  filter: invert(1);
 }
 
 .meta-item.location::before {
-  content: "📍";
-  position: absolute;
-  left: 0;
+  background: url('/files/assets/layout/map.svg') no-repeat ;
 }
 
 .meta-item.time::before {
-  content: "⏰";
-  position: absolute;
-  left: 0;
+  background: url('/files/assets/layout/time.svg') no-repeat ;
 }
 
 .event-title {

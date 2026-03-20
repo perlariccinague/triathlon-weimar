@@ -1,0 +1,125 @@
+@import "variables";
+
+.image-teaser {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1180px;
+  .content-element-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 120px auto;
+  }
+}
+
+
+.slider-teaser {
+  position: relative;
+  flex: 1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  cursor: pointer;
+}
+
+.slider-teaser a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slider-teaser img:not(.icon) {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.slider-teaser::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 155, 217, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slider-teaser:last-child::before {
+  background: rgba(229, 0, 125, 0.45);
+}
+
+.slider-teaser:hover::before {
+  opacity: 1;
+}
+
+.figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 20px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  width: 358px;
+  margin: 0 auto
+}
+
+.figcaption h3 {
+  font: normal italic 900 36px/40px 'Exo 2';
+  margin: 0;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/* Style pour l'icône - centrée et toujours visible */
+.icon {
+  position: absolute;
+  bottom: -15px;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0) invert(1);
+}
+
+/* État hover - Effet d'agrandissement de droite à gauche */
+.content-element-group:hover .slider-teaser {
+  flex: 0.8;
+  transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* La carte survolée s'agrandit */
+.slider-teaser:hover {
+  flex: 2 !important;
+  transform-origin: right center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation d'agrandissement de droite à gauche */
+.slider-teaser:hover img:not(.icon) {
+  transform: scale(1.05);
+}
+
+/* Au hover, le texte apparaît centré */
+.slider-teaser:hover .figcaption {
+  opacity: 1;
+}
+
+

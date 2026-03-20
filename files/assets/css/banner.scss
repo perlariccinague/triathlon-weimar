@@ -47,3 +47,38 @@
     transform: translateX(-50%);
     width: 420px;
 }
+
+.video-teaser {
+    position: relative;
+    .content-player {
+        width: 100%;
+        video {
+            width: 100%;
+        }
+    }
+    .content-text {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 90%;
+        max-width: 1180px;
+        top: 50%;
+        margin: 0;
+        color: #fff;
+        .rte {
+            text-align: center;
+            h2 {
+                &:after {
+                    left: 0%;
+                    transform: translateY(0%);
+                }
+                &:before {
+                    width: 500px;
+                    transform: translateX(-50%);
+                    left: 50%;
+                    bottom: -22px;
+                }
+            }
+        }
+    }
+}
