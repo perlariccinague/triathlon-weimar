@@ -95,5 +95,25 @@
   }
 }
 
-
+.news {
+  position: relative;
+  overflow: visible;
+  z-index: 101;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -8vw;
+    left: 0;
+    width: 100%;
+    height: 27vw;
+    background: url("/files/assets/layout/Barcode-blau-1.svg") no-repeat right;
+    z-index: 100;
+    background-size: 35%;
+  }
+  .content-element-group {
+    position: relative;
+    z-index: 101;
+    padding-top: 30px;
+  }
+}
 

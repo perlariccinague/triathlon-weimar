@@ -3,32 +3,44 @@
 .partner {
   background: black;
   color: white;
-  .rte {
-    width: 90%;
-    margin: 0 auto;
-    max-width: $max-width;
-    h2 {
-      &:before {
-        bottom: -22px;
-        width: 250px;
-      }
-      &:after {
-        left: 50%;
-        transform: translateX(-50%);
+  position: relative;
+  z-index: 10;
+  margin-top: -5px;
+  overflow: visible;
+  .content-text {
+    padding-top: 100px;
+    .rte {
+      width: 90%;
+      margin: 0 auto;
+      max-width: $max-width;
+      h2 {
+        &:before {
+          bottom: -22px;
+          width: 250px;
+        }
+        &:after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }
-}
-
-.partner {
-  background: #000;
-  color: #fff;
-  padding: 60px 0;
-
+  &:before {
+    content: "";
+    position: absolute;
+    top: -5vw;
+    left: 0;
+    width: 100%;
+    height: 11vw;
+    background: url("/files/assets/layout/Barcode-pink-2.svg") no-repeat left;
+    z-index: 100;
+    background-size: 80%;
+  }
 }
 
 .partner > .content-element-group {
   position: relative;
+  padding: 60px 0 180px;
 }
 
 .partner > .content-element-group > .content-element-group {
