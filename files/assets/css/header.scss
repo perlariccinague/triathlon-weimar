@@ -32,7 +32,9 @@
             position: relative;
             text-decoration: none;
             cursor: pointer;
-            all: unset;
+             border: 0;
+            padding: 0;
+            background: none;
             &:after {
                 content: "";
                 position: absolute;
