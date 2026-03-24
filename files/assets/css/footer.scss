@@ -90,7 +90,9 @@
   .content-text {
     p {
       a {
-        all: unset;
+        background: none;
+        border: 0;
+        padding: 0;
       }
     }
     &:first-child p {
@@ -112,6 +114,10 @@
       }
       a {
         font-size: 18px;
+        transition: color 250ms ease;
+        &:hover{
+          color: $blue;
+        }
       }
     }
   }

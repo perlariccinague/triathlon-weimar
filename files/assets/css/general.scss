@@ -59,6 +59,7 @@ ul {
     border: 2px solid white;
     font: normal italic 700 24px/30px 'Exo 2';
     text-transform: uppercase;
+    cursor: pointer;
     transition: all 250ms ease;
     &:hover {
         background: transparent;
@@ -95,19 +96,32 @@ ul {
 .join-team-button {
     position: fixed;
     z-index: 200;
-    top: 50vh;
+    bottom: 10vh;
     right: 0;
     transform: translateY(-50%);
     cursor: pointer;
-    //background:  url("/files/assets/layout/Barcode-blau-2.svg") no-repeat center/cover;
-    /*height: 200px;
-    width: 100%;*/
     a {
-        background: $blue;
-        color: black;
-        padding: 15px 20px;
-        text-transform: uppercase;
+        transition: opacity 250ms ease;
+        &:hover {
+            opacity: .7;
+        }
     }
-
 }
+
+.mod_article > .content-text {
+    width: 90%;
+    margin: 120px auto;
+    max-width: $max-width;
+    h2 {
+        &:before {
+            bottom: -22px;
+            width: 420px;
+        }
+        &:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
 
