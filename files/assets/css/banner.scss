@@ -45,11 +45,11 @@
 
 
 
-.mod_article.video-teaser {
+.mod_article.video-teaser, .mod_article.image-teaser-block {
     position: relative;
-    .content-player {
+    .content-player, .content-image {
         width: 100%;
-        video {
+        video , img {
             width: 100%;
         }
     }
@@ -78,7 +78,7 @@
     }
 }
 
-.video-teaser:before {
+.video-teaser:before, .image-teaser-block:before {
     content: '';
     position: absolute;
     top: 0;
@@ -93,3 +93,16 @@
         background: black;
     }
 }
+
+/*
+.video-teaser:after {
+    content: "";
+    position: absolute;
+    top: -5vw;
+    left: 0;
+    width: 100%;
+    height: 11vw;
+    background: url("/files/assets/layout/Barcode-pink-2.svg") no-repeat left;
+    z-index: 100;
+    background-size: 80%;
+}*/

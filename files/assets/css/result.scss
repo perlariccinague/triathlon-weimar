@@ -1,0 +1,68 @@
+@import "variables";
+
+.bg-blue {
+  background: $blue;
+  .content-text {
+    margin: 0 auto;
+  }
+  .content-element-group {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 100px;
+  }
+  .result-link {
+    color: black;
+    border: 2px solid currentColor;
+    width: 31%;
+    text-align: center;
+    padding: 15px 0;
+    transition: all 250ms ease;
+    .result {
+      h3 {
+        font-size: 24px;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: 700;
+      }
+      .result-info {
+        display: flex;
+        justify-content: space-around;
+       p {
+         position: relative;
+         padding-left: 22px;
+         &:before {
+           content: "";
+           position: absolute;
+           left: 0;
+           width: 20px;
+           height: 20px;
+           top: 8px;
+         }
+       }
+      }
+    }
+    &:hover {
+      background: black;
+    }
+  }
+}
+
+.result-info .result-date::before {
+  background: url('/files/assets/layout/date.svg') no-repeat ;
+  filter: invert(1);
+}
+
+.result-info .result-location::before {
+  background: url('/files/assets/layout/map.svg') no-repeat ;
+}
+
+.result-link:hover .result-info p:before {
+  filter: brightness(0) invert(1);
+}
+
+.result-link:hover .result {
+  color: white;
+}

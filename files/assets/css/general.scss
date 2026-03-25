@@ -124,4 +124,50 @@ ul {
     }
 }
 
+.bg-blue-gradient {
+    background: linear-gradient(180deg, #000 13.01%, #009BD9 100%);
+    margin-top: -130px;
+    p {
+        max-width: 900px;
+        margin: 15px auto 50px;
+        &:last-child {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        a {
+            border-radius: 0;
+            background: transparent;
+            padding: 15px 30px;
+            width: 25%;
+            font-size: 20px;
+            border: 2px solid currentColor;
+            &:hover {
+                background: black;
+                border-color: black;
+            }
+        }
+    }
+}
+
+.mod_article.bg-blue-gradient, .mod_article.bg-blue {
+    margin: 0 auto;
+    color: #fff;
+    width: 90%;
+    max-width: 1180px;
+    padding: 75px 0 100px;
+    z-index: 105;
+    position: relative;
+    text-align: center;
+    h2{
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    >.content-text {
+        margin-top: 0;
+    }
+}
+
 

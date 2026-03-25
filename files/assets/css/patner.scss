@@ -1,6 +1,6 @@
 @import "variables";
 
-.partner {
+.mod_article.partner {
   background: black;
   color: white;
   position: relative;
@@ -9,8 +9,8 @@
   overflow: visible;
   .content-text {
     padding-top: 100px;
+    margin: 0 auto;
     .rte {
-      width: 90%;
       margin: 0 auto;
       max-width: $max-width;
       h2 {
@@ -94,4 +94,53 @@
 
 .partner a:hover img {
   opacity: 0.75;
+}
+
+
+#hsv {
+  background: linear-gradient(180deg, #000000 0%, #009BD9 100%);
+  .content-element-group {
+    display: flex;
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+}
+
+.partner-grid {
+  display: grid;
+}
+
+.partner-item-link {
+  margin-bottom: 15px;
+  background: black;
+  padding: 15px;
+  transition: all 250ms ease;
+}
+
+.partner-item-link:hover .partner-logos {
+  opacity: .7;
+}
+
+.partner-item {
+  color: $blue;
+  text-align: center;
+  height: 100%;
+}
+
+
+.partner-item h3 {
+  font: normal italic 700 24px/30px"Exo 2";
+  margin: 15px auto;
+  text-transform: uppercase;
+}
+
+.partner-logos {
+  img {
+    height: auto;
+    margin: 10px auto;
+    display: block;
+  }
 }

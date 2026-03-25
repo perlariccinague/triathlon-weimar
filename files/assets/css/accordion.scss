@@ -1,0 +1,86 @@
+@import "variables";
+
+.content-accordion {
+  padding-bottom: 60px;
+  border-bottom: none;
+  margin: 0 auto;
+  max-width: $max-width;
+  h2 + h2.handorgel__header {
+    margin-top: 40px;
+    border-top: 2px solid #00438E;
+  }
+  .handorgel__header {
+    position: relative;
+    margin: 5px 0;
+    border-bottom: 2px solid black;
+    width: 70%;
+    &.handorgel__header--open {
+      border-bottom: none;
+    }
+    button {
+      border-top: none;
+      font: normal italic 700 20px/30px 'Exo 2';
+      text-transform: uppercase;
+      padding: 10px 0;
+      position: relative;
+      background: transparent;
+      transition: color 250ms ease;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        background: url("/files/assets/layout/accordeon-close.svg") no-repeat;
+        transition: background 250ms;
+      }
+      &:hover {
+        color: $blue;
+      }
+    }
+    &--opened {
+      button {
+        &:after {
+          background: url("/files/assets/layout/accordeon-open.svg") no-repeat;
+        }
+      }
+    }
+
+  }
+  .handorgel__content {
+    background-color: transparent;
+    width: 70%;
+    box-sizing: border-box;
+    border-top: none;
+    border-bottom: 2px solid black;
+    .handorgel__content__inner {
+      padding: 0 0 20px;
+      p {
+        font: normal italic 400 20px/30px 'Exo 2';
+      }
+    }
+  }
+  h2 {
+    &:before, &:after {
+      display: none;
+    }
+  }
+}
+
+.content-accordion {
+  h2:not(.handorgel__header) {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #004A97;
+    padding: 0 10px;
+    color: white;
+    font: normal italic 700 22px/30px 'Exo 2';
+    position: relative;
+    margin: 0;
+    display: inline;
+    box-decoration-break: clone;
+  }
+}
+

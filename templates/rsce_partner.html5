@@ -1,0 +1,35 @@
+<?php if (!empty($this->partners) && is_array($this->partners)): ?>
+<div class="partner-grid">
+    <?php foreach ($this->partners as $partner): ?>
+    <?php
+        // On récupère le lien du premier logo (ou un champ URL générique si tu veux)
+        $firstLogo = $partner->logos[0] ?? null;
+    $link = $firstLogo->link_url ?? '#';
+    $target = ' target="_blank" rel="noopener noreferrer"';
+    ?>
+
+    <a href="<?= htmlspecialchars($link) ?>"<?= $target ?> class="partner-item-link">
+    <div class="partner-item <?= $partner->primary ? 'partner-item--primary' : '' ?>">
+        <h3><?= htmlspecialchars($partner->title) ?></h3>
+        <div class="partner-logos">
+            <?php foreach ($partner->logos as $logoData): ?>
+            <?php
+                        $logoPath = null;
+                        if (!empty($logoData->logo)) {
+            $fileModel = \Contao\FilesModel::findByUuid($logoData->logo);
+            if ($fileModel) {
+            $logoPath = $fileModel->path;
+            }
+            }
+            ?>
+            <?php if ($logoPath): ?>
+            <img src="<?= htmlspecialchars($logoPath) ?>" alt="">
+            <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    </div>
+    </a>
+
+    <?php endforeach; ?>
+</div>
+<?php endif; ?>
