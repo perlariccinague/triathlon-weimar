@@ -34,7 +34,10 @@
     height: 11vw;
     background: url("/files/assets/layout/Barcode-pink-2.svg") no-repeat left;
     z-index: 100;
-    background-size: 80%;
+    background-size: 75%;
+  }
+  .content-hyperlink {
+    text-align: center;
   }
 }
 
@@ -97,16 +100,21 @@
 }
 
 
-#hsv {
+#hsv, #ingwe, #kst {
   background: linear-gradient(180deg, #000000 0%, #009BD9 100%);
+  padding-bottom: 100px;
   .content-element-group {
     display: flex;
     width: 90%;
     max-width: 1180px;
     margin: 0 auto;
     gap: 20px;
+    padding-bottom: 60px;
   }
-
+  &:before {
+    background: url("/files/assets/layout/Barcode-blau-2.svg") no-repeat left;
+    background-size: 75%;
+  }
 }
 
 .partner-grid {
@@ -144,3 +152,16 @@
     display: block;
   }
 }
+
+#kst{
+  background: linear-gradient(180deg, #000000 0%, #E5007D 100%);
+  &:before {
+    display: none;
+  }
+  .partner-item {
+    color: $pink;
+  }
+}
+
+
+

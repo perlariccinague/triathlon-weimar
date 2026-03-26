@@ -6,7 +6,7 @@
     top: 0;
     z-index: 200;
     color: white;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 .header-nav {
@@ -21,13 +21,16 @@
 .header-left {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     width: 45%;
+    margin-top: -10px;
+    margin-bottom: 20px;
     .content-text p {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0;
+        gap: 10px;
         a {
             position: relative;
             text-decoration: none;
@@ -38,10 +41,10 @@
             &:after {
                 content: "";
                 position: absolute;
-                bottom: -10px;
+                bottom: -4px;
                 left: 0;
                 width: 100%;
-                height: 10px;
+                height: 8px;
                 background-color: $blue;
                 transform: scaleY(0);
                 transform-origin: top;
@@ -146,12 +149,19 @@
     }
 }
 
+
 .header-left .rte a img {
     filter: grayscale(100%) brightness(0.7);
-    transition: 0.3s;
 }
 
 .header-left .rte a.active img {
     filter: none;
+}
 
+.header-left .rte a.active:after {
+    transform: scaleY(1);
+}
+
+.header-left .rte a.active-home img {
+    filter: none;
 }

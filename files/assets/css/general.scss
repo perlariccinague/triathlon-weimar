@@ -13,7 +13,7 @@ a {
 }
 
 h1, h2 {
-    font: normal italic 900 60px/70px 'Exo 2';
+    font: normal italic 700 60px/70px 'Exo 2';
     text-transform: uppercase;
 }
 
@@ -37,7 +37,7 @@ h2 {
 }
 
 h3 {
-    font: normal italic 900 50px/60px 'Exo 2';
+    font: normal italic 700 50px/60px 'Exo 2';
 }
 
 p, li {
@@ -54,8 +54,8 @@ ul {
 .mod_eventreader .back a, .content-text p a{
     background: white;
     color: black;
-    padding: 5px 10px;
-    border-radius: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
     border: 2px solid white;
     font: normal italic 700 24px/30px 'Exo 2';
     text-transform: uppercase;
@@ -67,6 +67,8 @@ ul {
         border: 2px solid white;
     }
 }
+
+
 
 .mod_newsreader .back, .mod_eventreader .back{
     width: 90%;
@@ -169,5 +171,53 @@ ul {
         margin-top: 0;
     }
 }
+
+.bg-blue-space .content-text, .bg-pink-space .content-text {
+    background: #009bd9;
+    width: 100%;
+    padding: 100px 0 120px;
+    margin-top: -90px;
+    .rte {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+        h2{
+            &:before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        p {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding-top: 60px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            a {
+                border-radius: 0;
+                background: transparent;
+                padding: 15px 30px;
+                font-size: 20px;
+                border: 2px solid currentColor;
+                &:hover {
+                    background: black;
+                    border-color: black;
+                }
+            }
+        }
+    }
+}
+
+.bg-pink-space .content-text {
+    background: $pink;
+    h2 {
+        color: white;
+        &:before {
+            background: white;
+        }
+    }
+}
+
 
 
