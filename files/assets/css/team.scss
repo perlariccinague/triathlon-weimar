@@ -1,0 +1,101 @@
+@import "variables";
+
+.mod_article.team {
+  h2{
+    &:before, &:after {
+      background: black;
+    }
+  }
+  .legend {
+    margin: 0 auto;
+    .rte {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+      p:not(:first-child ) {
+        border: 2px solid currentColor;
+        text-transform: uppercase;
+        padding: 5px 10px;
+      }
+      p:nth-child(2) {
+        color: $blue;
+      }
+    }
+  }
+  .content-element-group {
+    display: flex;
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+
+
+
+.team-grid {
+  margin-bottom: 20px;
+  width: 22%;
+}
+
+
+.team-member {
+  padding: 15px 0;
+  text-align: center;
+}
+
+
+
+.team-image {
+  width: 300px;
+  height: 250px;;
+}
+
+.name-bold {
+  font: normal italic 700 20px/30px 'Exo 2';
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  .number-box {
+    padding: 5px 10px;
+    border: 2px solid currentColor;
+    &.number-blue {
+      color: $blue;
+      border-color: currentColor;
+    }
+  }
+}
+
+.description {
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.3em;
+}
+
+.email a {
+  color: $blue;
+  text-decoration: underline;
+  font: normal italic 400 18px/30px 'Exo 2';
+  transition: all 250ms ease;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 100%;
+  }
+}

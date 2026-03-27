@@ -1,0 +1,99 @@
+<?php
+// Nettoyage du type (enlève "rsce_" si présent)
+$type = str_replace('rsce_', '', $this->type ?? 'team');
+?>
+
+<?php if (!empty($this->team) && is_array($this->team)): ?>
+
+<div class="team-grid type-<?= htmlspecialchars($type) ?>">
+
+    <?php foreach ($this->team as $member): ?>
+    <div class="team-member">
+
+        <!-- IMAGE -->
+        <?php if (!empty($member->image)): ?>
+        <?php
+                $fileModel = \Contao\FilesModel::findByUuid($member->image);
+        $photoPath = $fileModel ? $fileModel->path : '';
+        ?>
+        <?php if ($photoPath): ?>
+        <img src="<?= htmlspecialchars($photoPath) ?>" class="team-image" alt="">
+        <?php endif; ?>
+        <?php endif; ?>
+
+        <!-- NOM + DRAPEAU -->
+        <div class="name-bold">
+            <?php if (!empty($member->flag_emoji)): ?>
+            <span class="team-flag-emoji"><?= htmlspecialchars($member->flag_emoji) ?></span>
+            <?php endif; ?>
+
+            <?php if (!empty($member->firstname)): ?>
+            <span class="firstname"><?= htmlspecialchars(strtoupper($member->firstname)) ?></span>
+            <?php endif; ?>
+
+            <?php if (!empty($member->lastname)): ?>
+            <span class="lastname"><?= htmlspecialchars(strtoupper($member->lastname)) ?></span>
+            <?php endif; ?>
+        </div>
+
+        <!-- TEAM UNIQUEMENT -->
+        <?php if ($type === 'team'): ?>
+
+        <?php if (isset($member->number1) && $member->number1 !== '' || isset($member->number2) && $member->number2 !== ''): ?>
+        <div class="numbers">
+
+            <?php if (isset($member->number1) && $member->number1 !== ''): ?>
+            <div class="number-box number-blue">
+                <?= htmlspecialchars($member->number1) ?>
+            </div>
+            <?php endif; ?>
+
+            <?php if (isset($member->number2) && $member->number2 !== ''): ?>
+            <div class="number-box number-black">
+                <?= htmlspecialchars($member->number2) ?>
+            </div>
+            <?php endif; ?>
+
+        </div>
+        <?php endif; ?>
+
+        <?php if (!empty($member->year)): ?>
+        <div class="year">
+            <?= htmlspecialchars($member->year) ?>
+        </div>
+        <?php endif; ?>
+
+        <?php endif; ?>
+
+        <!-- TRAINER UNIQUEMENT -->
+        <?php if ($type === 'trainer'): ?>
+
+        <?php if (!empty($member->position)): ?>
+        <div class="position">
+            <?= htmlspecialchars($member->position) ?>
+        </div>
+        <?php endif; ?>
+
+        <?php if (!empty($member->mail)): ?>
+        <div class="email">
+            <a href="mailto:<?= htmlspecialchars($member->mail) ?>">
+                <?= htmlspecialchars($member->mail) ?>
+            </a>
+        </div>
+        <?php endif; ?>
+
+        <?php endif; ?>
+
+        <!-- DESCRIPTION (COMMUN) -->
+        <?php if (!empty($member->description)): ?>
+        <div class="description">
+            <?= htmlspecialchars($member->description) ?>
+        </div>
+        <?php endif; ?>
+
+    </div>
+    <?php endforeach; ?>
+
+</div>
+
+<?php endif; ?>
