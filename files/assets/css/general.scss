@@ -50,6 +50,19 @@ ul {
     list-style: none
 }
 
+.content-text li {
+    position: relative;
+    margin-left: 18px;
+    &:before {
+        font-weight: normal;
+        content: "»";
+        position: absolute;
+        margin-left: -19px;
+        font-size: 25px;
+        margin-top: -3px;
+    }
+}
+
 .content-hyperlink a, .mod_newsreader .back a,
 .mod_eventreader .back a, .content-text p a{
     background: white;

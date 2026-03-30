@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
         dot.addEventListener('click', () => {
-            index = i + 1; // +1 car premier clone
+            index = i + 1;
             move();
         });
         dotsContainer.appendChild(dot);
@@ -33,13 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
         track.style.transition = "transform 0.5s ease";
         track.style.transform = `translateX(-${offset}px)`;
 
-        // Gestion des classes active / prev / next
         slides.forEach(s => s.classList.remove('active', 'prev', 'next'));
         slides[index].classList.add('active');
         if (slides[index - 1]) slides[index - 1].classList.add('prev');
         if (slides[index + 1]) slides[index + 1].classList.add('next');
 
-        // Mise à jour des dots (corrigé pour clones)
         dots.forEach(d => d.classList.remove('active'));
         let realIndex = (index === 0) ? realCount - 1
             : (index === slides.length - 1) ? 0
@@ -72,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
         move();
     }
 
-    // Drag & swipe
     let startX = 0;
     track.addEventListener('mousedown', e => startX = e.clientX);
     track.addEventListener('mouseup', e => {

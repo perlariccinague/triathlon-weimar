@@ -3,21 +3,7 @@
 
   <h2><?= $this->title ?></h2>
 
-  <?php if ($this->recurring): ?>
-    <p class="info recurring"><?= $this->recurring ?></p>
-  <?php else: ?>
-  <p class="info">
-    <span class="meta-item date"><?= date('d. F Y', $this->startDate) ?></span>
-    <?php if ($this->startTime): ?>
-      <span class="meta-item time"><?= date('H:i', $this->startTime) ?>
-      <?php if ($this->endTime): ?>–<?= date('H:i', $this->endTime) ?><?php endif; ?></span>
-    <?php endif; ?>
-  </p>
-  <?php endif; ?>
 
-  <?php if ($this->location): ?>
-    <p class="location"><?= $this->location ?><?php if ($this->address): ?> (<?= $this->address ?>)<?php endif; ?></p>
-  <?php endif; ?>
 
   <?php if ($this->details): ?>
     <?= $this->details ?>
@@ -36,6 +22,22 @@
       <?php endif; ?>
     </div>
   <?php endif; ?>
+
+    <?php if ($this->recurring): ?>
+    <p class="info recurring"><?= $this->recurring ?></p>
+    <?php else: ?>
+    <p class="info">
+        <span class="meta-item date"><?= date('d. F Y', $this->startDate) ?></span>
+    </p>
+    <?php if ($this->startTime): ?>
+    <p class="meta-item time"><?= date('H:i', $this->startTime) ?>
+        <?php if ($this->endTime): ?>–<?= date('H:i', $this->endTime) ?><?php endif; ?></p>
+    <?php endif; ?>
+    <?php endif; ?>
+
+    <?php if ($this->location): ?>
+    <p class="meta-item location"><?= $this->location ?><?php if ($this->address): ?> (<?= $this->address ?>)<?php endif; ?></p>
+    <?php endif; ?>
 
   <?php if ($this->enclosure): ?>
     <ul class="enclosure">
