@@ -198,6 +198,8 @@
       <path value="$PROJECT_DIR$/vendor/terminal42/service-annotation-bundle" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/madeyourday/contao-rocksolid-custom-elements" />
+      <path value="$PROJECT_DIR$/vendor/codefog/contao-mobile_menu" />
+      <path value="$PROJECT_DIR$/vendor/contao-community-alliance/composer-plugin" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">

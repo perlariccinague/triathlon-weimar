@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5eb17366c6718881d5f64258b908b14",
+    "content-hash": "4eee6beb0739573b5a39347f745b3c17",
     "packages": [
         {
             "name": "ausi/slug-generator",
@@ -442,6 +442,67 @@
             "time": "2026-03-01T16:18:30+00:00"
         },
         {
+            "name": "codefog/contao-mobile_menu",
+            "version": "2.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codefog/contao-mobile_menu.git",
+                "reference": "cfa7639d0295510ed943a70b7d9791cbc392bf99"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codefog/contao-mobile_menu/zipball/cfa7639d0295510ed943a70b7d9791cbc392bf99",
+                "reference": "cfa7639d0295510ed943a70b7d9791cbc392bf99",
+                "shasum": ""
+            },
+            "require": {
+                "contao-community-alliance/composer-plugin": "~2.4 || ~3.0",
+                "contao/core-bundle": "^4.13 || ^5.0",
+                "php": "^7.4 || ^8.0"
+            },
+            "type": "contao-module",
+            "extra": {
+                "contao": {
+                    "sources": {
+                        "": "system/modules/mobile_menu"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codefog\\MobileMenu\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Codefog",
+                    "homepage": "http://codefog.pl"
+                }
+            ],
+            "description": "mobile_menu extension for Contao Open Source CMS",
+            "keywords": [
+                "contao",
+                "menu",
+                "mobile",
+                "navigation"
+            ],
+            "support": {
+                "issues": "https://github.com/codefog/contao-mobile_menu/issues",
+                "source": "https://github.com/codefog/contao-mobile_menu/tree/2.7.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/codefog",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-11-09T08:16:09+00:00"
+        },
+        {
             "name": "composer/ca-bundle",
             "version": "1.5.10",
             "source": {
@@ -512,6 +573,55 @@
                 }
             ],
             "time": "2025-12-08T15:06:51+00:00"
+        },
+        {
+            "name": "contao-community-alliance/composer-plugin",
+            "version": "3.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/contao-community-alliance/composer-plugin.git",
+                "reference": "584654b406f7da14f4847aad1848e7e64fe4868b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/contao-community-alliance/composer-plugin/zipball/584654b406f7da14f4847aad1848e7e64fe4868b",
+                "reference": "584654b406f7da14f4847aad1848e7e64fe4868b",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0",
+                "php": "^7.1 || ^8.0",
+                "symfony/finder": "^4.4 || ^5.2 || ^6.0 || ^7.0",
+                "symfony/process": "^4.4 || ^5.2 || ^6.0 || ^7.0"
+            },
+            "conflict": {
+                "contao/core": "*",
+                "contao/core-bundle": "<4.9"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0",
+                "symfony/phpunit-bridge": "^3.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "ContaoCommunityAlliance\\Composer\\Plugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ContaoCommunityAlliance\\Composer\\Plugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "description": "Composer plugin that provides installers for contao-module and legacy-contao-module.",
+            "homepage": "http://c-c-a.org/",
+            "support": {
+                "issues": "https://github.com/contao-community-alliance/composer-plugin/issues",
+                "source": "https://github.com/contao-community-alliance/composer-plugin/tree/3.2.5"
+            },
+            "time": "2026-02-19T09:02:47+00:00"
         },
         {
             "name": "contao-components/ace",

@@ -156,7 +156,8 @@
 #kst{
   background: linear-gradient(180deg, #000000 0%, #E5007D 100%);
   &:before {
-    display: none;
+    background: url("/files/assets/layout/Barcode-pink-2.svg") no-repeat left;
+    background-size: 75%;
   }
   .partner-item {
     color: $pink;

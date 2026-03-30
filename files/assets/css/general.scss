@@ -24,7 +24,7 @@ h2 {
         position: absolute;
         height: 10px;
         z-index: 1;
-        background: #f2c94c;
+        background: #E8E000;
     }
     &::after {
         content: '';
@@ -68,7 +68,7 @@ ul {
     background: white;
     color: black;
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 20px;
     border: 2px solid white;
     font: normal italic 700 24px/30px 'Exo 2';
     text-transform: uppercase;
@@ -98,7 +98,6 @@ ul {
     right: 5vw;
     z-index: 200;
     cursor: pointer;
-    background: white;
     border-radius: 50%;
     img {
         transition: opacity 250ms;

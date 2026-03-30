@@ -1,0 +1,54 @@
+@import "variables";
+
+@media screen and (max-width: $mobile-width) {
+  .header-right {
+    display: none;
+  }
+  .wrapper-menu {
+    display: flex;
+    width: 30%;
+    justify-content: end;
+    .mobile_menu_trigger {
+      .menu-button-wrapper {
+        position: relative;
+        width: 36px;
+        height: 35px;
+        overflow: visible;
+        cursor: pointer;
+        > div {
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          border-radius: 3px;
+          background: white;
+          transition: transform 250ms;
+        }
+        .menu-button-top-bar {
+          top: 0;
+          transform-origin: center;
+        }
+        .menu-button-middle-bar {
+          top: 11px;
+          transition: opacity 250ms;
+        }
+        .menu-button-bottom-bar {
+          top: 21px;
+          transform-origin: center;
+        }
+      }
+      &.active {
+        .menu-button-wrapper {
+          .menu-button-top-bar {
+            transform: rotate(-45deg) translateX(-8px) translateY(8px);
+          }
+          .menu-button-middle-bar {
+            opacity: 0;
+          }
+          .menu-button-bottom-bar {
+            transform: rotate(45deg) translateX(-6px) translateY(-7px);
+          }
+        }
+      }
+    }
+  }
+}
