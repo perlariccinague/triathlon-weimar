@@ -68,7 +68,7 @@
     padding: 10px 0;
 }
 
-.header-right ul.level_1 li {
+.header-right ul.level_1 li, .inner .mod_customnav li{
     a {
         font: normal italic 700 20px/30px "Exo 2";
         color: white;
@@ -88,7 +88,7 @@
         background: white;
         color: black;
         padding: 5px 10px;
-        border-radius: 15px;
+        border-radius: 20px;
         border: 2px solid white;
         transition: all 250ms ease;
         &:hover {
@@ -170,4 +170,22 @@
     display: none;
 }
 
+@media screen and (max-width: $mobile-width) {
 
+}
+
+@media screen and (max-width: 400px) {
+    .header-left {
+        width: 70%;
+        margin-top: -4px;
+    }
+    .home-button {
+        width: 35%;
+    }
+    .header-image .content-text {
+        top: 45%;
+        .rte p {
+            font-size: 18px;
+        }
+    }
+}

@@ -190,6 +190,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/madeyourday/contao-rocksolid-custom-elements" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/codefog/contao-mobile_menu" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/contao-community-alliance/composer-plugin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/klapproth-koch/contao-event-news-categories" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

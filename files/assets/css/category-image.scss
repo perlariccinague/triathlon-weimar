@@ -78,14 +78,14 @@
 }
 
 .figcaption h3 {
-  font: normal italic 900 36px/40px 'Exo 2';
+  font: normal italic 700 36px/40px 'Exo 2';
   margin: 0;
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   color: white;
 }
 
-/* Style pour l'icône - centrée et toujours visible */
+
 .icon {
   position: absolute;
   bottom: -15px;
@@ -99,27 +99,36 @@
   filter: brightness(0) invert(1);
 }
 
-/* État hover - Effet d'agrandissement de droite à gauche */
+
 .content-element-group:hover .slider-teaser {
   flex: 0.8;
   transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* La carte survolée s'agrandit */
+
 .slider-teaser:hover {
   flex: 2 !important;
   transform-origin: right center;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Animation d'agrandissement de droite à gauche */
+
 .slider-teaser:hover img:not(.icon) {
   transform: scale(1.05);
 }
 
-/* Au hover, le texte apparaît centré */
+
 .slider-teaser:hover .figcaption {
   opacity: 1;
 }
 
+@media screen and (max-width: 400px) {
+  .figcaption {
+    padding: 0;
+    width: 100%;
+    h3 {
+      font: normal italic 700 16px/30px "Exo 2";
+    }
+  }
+}
 

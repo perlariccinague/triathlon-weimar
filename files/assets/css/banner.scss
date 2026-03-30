@@ -148,3 +148,29 @@
         color: black;
     }
 }
+
+@media screen and (max-width: $mobile-width)  {
+    .mod_article.banner-box {
+        margin: -55px auto 0;
+        padding: 53px 0 35px 0;
+        .content-text {
+            width: 90%;
+            margin: 0 auto;
+            h2 {
+                &:before {
+                    width: 258px;
+                    height: 8px;
+                }
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px)  {
+    .mod_article.banner-box {
+        margin: -32px auto 0;
+        padding: 23px 0 35px 0;
+    }
+}

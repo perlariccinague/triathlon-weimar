@@ -2,10 +2,12 @@
 
 body {
     font-family: 'Exo 2', sans-serif;
+    overflow-X: hidden;
 }
 
 html {
     scroll-behavior: smooth;
+
 }
 
 a {
@@ -96,7 +98,7 @@ ul {
     height: 50px;
     bottom: 5vw;
     right: 5vw;
-    z-index: 200;
+    z-index: 105;
     cursor: pointer;
     border-radius: 50%;
     img {
@@ -109,7 +111,7 @@ ul {
 
 .join-team-button {
     position: fixed;
-    z-index: 200;
+    z-index: 105;
     bottom: 10vh;
     right: 0;
     transform: translateY(-50%);
@@ -228,6 +230,21 @@ ul {
         &:before {
             background: white;
         }
+    }
+}
+
+@media screen and (max-width: $mobile-width) {
+    h1, h2 {
+        font: normal italic 700 30px/36px 'Exo 2';
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1, h2 {
+        font: normal italic 700 20px/26px 'Exo 2';
+    }
+    p {
+        font-size: 18px;
     }
 }
 

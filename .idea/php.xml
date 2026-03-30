@@ -200,6 +200,7 @@
       <path value="$PROJECT_DIR$/vendor/madeyourday/contao-rocksolid-custom-elements" />
       <path value="$PROJECT_DIR$/vendor/codefog/contao-mobile_menu" />
       <path value="$PROJECT_DIR$/vendor/contao-community-alliance/composer-plugin" />
+      <path value="$PROJECT_DIR$/vendor/klapproth-koch/contao-event-news-categories" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.3">
