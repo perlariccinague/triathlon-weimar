@@ -34,7 +34,7 @@
         right: 15px;
         width: 25px;
         height: 25px;
-        background: url("/files/assets/layout/accordeon-close.svg") no-repeat;
+        background: url("/files/assets/layout/accordeon-close.svg") no-repeat center/contain;
         transition: background 250ms;
       }
       &:hover {
@@ -44,11 +44,10 @@
     &--opened {
       button {
         &:after {
-          background: url("/files/assets/layout/accordeon-open.svg") no-repeat;
+          background: url("/files/assets/layout/accordeon-open.svg") no-repeat center/contain;
         }
       }
     }
-
   }
   .handorgel__content {
     background-color: transparent;
@@ -85,3 +84,8 @@
   }
 }
 
+@media screen and (max-width: $mobile-width)  {
+  .content-accordion .handorgel__header {
+    width: 100%;
+  }
+}

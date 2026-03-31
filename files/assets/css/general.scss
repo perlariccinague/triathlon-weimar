@@ -104,8 +104,24 @@ ul {
     img {
         transition: opacity 250ms;
     }
+    img:first-child {
+        transition: opacity 250ms;
+    }
+    .hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 250ms;
+        z-index: 200;
+    }
     &:hover {
-        opacity: 0.6;
+        img:first-child {
+            opacity: 0;
+        }
+        .hover {
+            opacity: 1;
+        }
     }
 }
 
@@ -214,6 +230,7 @@ ul {
                 padding: 15px 30px;
                 font-size: 20px;
                 border: 2px solid currentColor;
+                min-width: 235px;
                 &:hover {
                     background: black;
                     border-color: black;
@@ -235,16 +252,63 @@ ul {
 
 @media screen and (max-width: $mobile-width) {
     h1, h2 {
-        font: normal italic 700 30px/36px 'Exo 2';
+        font: normal italic 700 50px/56px 'Exo 2';
+    }
+    .bg-blue-gradient {
+        .content-text {
+            margin-bottom: 50px;
+            p {
+                margin-bottom: 0;
+                a {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .bg-blue-space .content-text .rte , .bg-pink-space .content-text .rte,
+    .mod_article.bg-blue-gradient .rte, .mod_article.bg-blue .rte {
+        width: 90%;
+        h2:before {
+            width: 258px;
+            height: 8px;
+        }
+        p {
+            flex-wrap: wrap;
+        }
     }
 }
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 480px) {
     h1, h2 {
-        font: normal italic 700 20px/26px 'Exo 2';
+        font: normal italic 700 30px/36px 'Exo 2';
     }
     p {
         font-size: 18px;
+    }
+
+    .content-hyperlink a, .mod_newsreader .back a, .mod_eventreader .back a, .content-text p a {
+        font-size: 18px;
+    }
+
+    .content-hyperlink a, .mod_newsreader .back a, .mod_eventreader .back a, .content-text p a {
+        padding: 3px 7px;
+    }
+
+
+    .mod_article.bg-blue-gradient .rte, .mod_article.bg-blue .rte {
+        width: 100%;
+    }
+
+    .mod_article > .content-text h2 {
+        &:before {
+            bottom: -14px;
+            width: 190px;
+        }
+        &:after {
+            bottom: -11px;
+        }
     }
 }
 

@@ -248,3 +248,29 @@
 .event-filters .reset-btn:hover {
   color: $blue;
 }
+
+@media screen and (max-width: $mobile-width) {
+  .mod_eventlist {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .event-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .event-card {
+    width: 100%;
+  }
+  .event-title, .event-content .ce_text {
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .event-group .content-element-group h2::before {
+    width: 200px;
+  }
+}

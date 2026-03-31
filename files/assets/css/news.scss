@@ -137,3 +137,18 @@
   }
 }
 
+@media screen and (max-width: $mobile-width) {
+  .news .content-element-group, .layout_full {
+    margin-bottom: 0;
+  }
+  .news .content-element-group .rte h2, .layout_full h2 {
+    &:before {
+      width: 130px;
+    }
+  }
+  .news::before {
+    top: -14vw;
+    background-size: 55%;
+  }
+}
+

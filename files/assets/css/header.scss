@@ -42,8 +42,8 @@
                 content: "";
                 position: absolute;
                 bottom: -4px;
-                left: 0;
-                width: 100%;
+                left: 5px;
+                width: 80%;
                 height: 8px;
                 background-color: $blue;
                 transform: scaleY(0);
@@ -170,8 +170,17 @@
     display: none;
 }
 
-@media screen and (max-width: $mobile-width) {
+.mobile-only {
+    display: none;
+}
 
+@media screen and (max-width: $mobile-width) {
+    .mobile-only {
+        display: block;
+    }
+    .desktop-only {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 400px) {

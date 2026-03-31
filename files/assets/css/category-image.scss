@@ -122,6 +122,26 @@
   opacity: 1;
 }
 
+@media screen and (max-width: $mobile-width) {
+  .image-teaser .content-element-group {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    .slider-teaser {
+      box-shadow: none;
+      flex: none;
+      width: 100%;
+      img:not(.icon) {
+        height: 300px;
+      }
+    }
+  }
+  .figcaption {
+    opacity: 1;
+    top: 40%;
+  }
+}
+
+
 @media screen and (max-width: 400px) {
   .figcaption {
     padding: 0;
@@ -129,6 +149,9 @@
     h3 {
       font: normal italic 700 16px/30px "Exo 2";
     }
+  }
+  .image-teaser .content-element-group {
+    margin-bottom: 0;
   }
 }
 
