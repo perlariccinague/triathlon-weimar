@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
         else if (diff < -50) next();
     });
 
-    // Initialisation
     window.addEventListener('load', () => {
         move();
         setTimeout(move, 100);
@@ -100,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const slides = container.querySelectorAll('.slide');
 
         if (window.innerWidth <= 1024 && !mobileSwiper) {
-            // Ajouter classes Swiper dynamiquement
             container.classList.add('swiper');
             slidesWrapper.classList.add('swiper-wrapper');
             slides.forEach(slide => slide.classList.add('swiper-slide'));
@@ -117,11 +115,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
             });
         } else if (window.innerWidth > 1024 && mobileSwiper) {
-            // Détruire Swiper si on repasse desktop
             mobileSwiper.destroy(true, true);
             mobileSwiper = null;
 
-            // Retirer classes Swiper
             container.classList.remove('swiper');
             slidesWrapper.classList.remove('swiper-wrapper');
             slides.forEach(slide => slide.classList.remove('swiper-slide'));
@@ -131,29 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileSwiper();
     window.addEventListener("resize", initMobileSwiper);
 });
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    const totalSlides = document.querySelectorAll('.swiper-slide').length;
-    const centerIndex = Math.floor(totalSlides / 2); // ex: 5 slides → 2
 
-    const swiper = new Swiper(".slider-container", {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        loop: true,
-        centeredSlides: true,
-        initialSlide: centerIndex,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        },
-    });
-});*/
 
