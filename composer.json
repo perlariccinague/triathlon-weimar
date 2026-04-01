@@ -13,8 +13,7 @@
         "contao/news-bundle": "^5.7",
         "contao/newsletter-bundle": "^5.7",
         "madeyourday/contao-rocksolid-custom-elements": "*",
-        "codefog/contao-mobile_menu": "^2.7",
-        "klapproth-koch/contao-event-news-categories": "^1.0"
+        "codefog/contao-mobile_menu": "^2.7"
     },
     "conflict": {
         "contao-components/installer": "<1.3"

@@ -63,12 +63,16 @@
   margin-bottom: 25px;
   position: relative;
   cursor: pointer;
+  overflow: visible;
   transition: all 250ms ease;
   &:hover {
     background: $blue;
   }
   &:last-child {
     border-color: $pink;
+    .news-image {
+      top: -28px;
+    }
     &:hover {
       background: $pink;
     }
@@ -83,7 +87,7 @@
   }
   .news-image {
     position: absolute;
-    top: -30px;
+    top: -22px;
     right: 30px;
     width: 80px;
   }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f00451c9bcd47cf6cddf34c8157e3e2e",
+    "content-hash": "4eee6beb0739573b5a39347f745b3c17",
     "packages": [
         {
             "name": "ausi/slug-generator",
@@ -4065,46 +4065,6 @@
                 "source": "https://github.com/php-imagine/Imagine/tree/1.5.2"
             },
             "time": "2026-01-09T10:45:12+00:00"
-        },
-        {
-            "name": "klapproth-koch/contao-event-news-categories",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SamesOfAm/contao-event-news-categories.git",
-                "reference": "424b4a8656f213d65f454da9babd25cb71dbfb87"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/424b4a8656f213d65f454da9babd25cb71dbfb87",
-                "reference": "424b4a8656f213d65f454da9babd25cb71dbfb87",
-                "shasum": ""
-            },
-            "require": {
-                "contao/calendar-bundle": "^5.7",
-                "contao/core-bundle": "^5.7",
-                "contao/news-bundle": "^5.7",
-                "php": "^8.1"
-            },
-            "type": "contao-bundle",
-            "extra": {
-                "contao-manager-plugin": "KlapprothKoch\\ContaoEventNewsCategories\\ContaoManager\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "KlapprothKoch\\ContaoEventNewsCategories\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-3.0-or-later"
-            ],
-            "description": "Adds categories to Contao 5 news and events",
-            "support": {
-                "issues": "https://github.com/SamesOfAm/contao-event-news-categories/issues",
-                "source": "https://github.com/SamesOfAm/contao-event-news-categories/tree/v1.0.0"
-            },
-            "time": "2026-03-27T15:31:53+00:00"
         },
         {
             "name": "knplabs/knp-menu",
