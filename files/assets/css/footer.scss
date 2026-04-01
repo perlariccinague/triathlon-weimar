@@ -158,7 +158,7 @@
 
 .footer-right .widget {
   width: 100%;
-  margin: 20px auto;
+  margin: 15px auto;
   &:focus-visible {
     outline: 0;
   }
@@ -168,7 +168,7 @@
 .footer-right .widget input,
 .footer-right .widget textarea {
   width: 100%;
-  padding: 14px 18px;
+  padding: 5px 10px;
   background: #9C9B9B;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 15px;
@@ -192,8 +192,8 @@
   background: white;
   color: black;
   border: none;
-  padding: 14px 30px;
-  border-radius: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
   font: normal italic 700 18px/24px 'Exo 2';
   font-weight: 700;
   cursor: pointer;

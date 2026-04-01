@@ -94,8 +94,21 @@
   }
 }
 
+@media (max-width: 767px) {
+  .mod_article.team .content-element-group {
+    flex-wrap: wrap;
+    .team-grid {
+      width: 45%;
+    }
+  }
+
+}
+
 @media (max-width: 480px) {
-  .team-member {
+  .team-member, .team-grid  {
+    width: 100%;
+  }
+  .mod_article.team .content-element-group .team-grid {
     width: 100%;
   }
 }
