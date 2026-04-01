@@ -55,7 +55,7 @@
   .mobile_menu {
     z-index: 106;
     .inner {
-      background: linear-gradient(180deg, #000 0%, #009BD9 100%);
+      background: linear-gradient(180deg, #000 0%, #000 15%, #009BD9 100%);
       .mod_customnav {
         width: 90%;
         margin: 85px auto 0;
@@ -74,6 +74,13 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mobile_menu .inner .mod_customnav {
+    padding: 50px 0 40px;
+
   }
 }
 

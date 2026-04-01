@@ -46,7 +46,21 @@
       color: white;
     }
   }
+}
 
+.event-card-wrapper:hover .event-card {
+  background: $blue;
+  color: white;
+}
+
+
+.event-card-wrapper:hover .event-card.kst {
+  background: $pink;
+}
+
+
+.event-card-wrapper:hover .event-card.hsv, .event-card-wrapper:hover .event-card.ingWe{
+  background: $blue;
 }
 
 
@@ -105,7 +119,7 @@
   color: white;
 }
 
-.event-card:hover .event-badge, .event-card:hover .meta-item:before {
+.event-card-wrapper:hover .event-badge, .event-card-wrapper:hover .meta-item:before {
   filter: brightness(0) invert(1);
 }
 
@@ -201,7 +215,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
-    .event-card {
+    .event-card-wrapper {
       width:32%;
     }
   }
@@ -251,20 +265,26 @@
 }
 
 @media screen and (max-width: $mobile-width) {
-  .mod_eventlist {
+  .events-all .mod_eventlist {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .event-card {
+  .event-card-wrapper {
     width: 45%;
   }
-  .events-all .mod_eventlist .event-card {
+  .events-all .mod_eventlist .event-card-wrapper {
     width: 45%;
+  }
+  .event-badge {
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-size: 60px;
   }
 }
 
 @media screen and (max-width: 670px) {
-  .event-card {
+  .events-all .mod_eventlist .event-card-wrapper {
     width: 100%;
   }
   .event-title, .event-content .ce_text {

@@ -14,6 +14,8 @@
         bottom: -22px;
         background: white;
         color: white;
+        left: 50%;
+        transform: translateX(-50%);
       }
       &:after {
         width: 90%;
@@ -28,14 +30,18 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
+  align-items: center;
   .content-download {
     width: 18%;
     font-size: 20px;
     border: 2px solid currentColor;
     margin: 10px auto;
     text-align: center;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
     a {
       display: flex;
       padding: 15px 20px;
@@ -50,6 +56,54 @@
         color: white;
       }
     }
+  }
+}
 
+@media screen and (max-width: 1200px) {
+  .map-routes > .content-element-group > .content-element-group .content-download {
+    min-height: 120px;
+  }
+}
+
+@media screen and (max-width: $mobile-width)   {
+  .map-routes > .content-element-group > .content-element-group {
+    padding-top: 20px;
+    .content-download {
+      width: 20%;
+    }
+  }
+  .map-routes > .content-element-group h2 {
+    font: normal italic 700 30px/36px "Exo 2";
+    &:before {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 850px)   {
+  .map-routes > .content-element-group > .content-element-group {
+    .content-download {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px)   {
+  .map-routes > .content-element-group > .content-element-group {
+    .content-download {
+      width: 45%;
+    }
+  }
+}
+@media screen and (max-width: 400px)   {
+  .map-routes > .content-element-group > .content-element-group {
+    padding-top: 20px;
+    .content-download {
+      width: 100%;
+      min-height: 60px;
+    }
+    .map-routes > .content-element-group h2::before {
+      width: 200px;
+    }
   }
 }

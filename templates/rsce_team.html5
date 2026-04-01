@@ -1,6 +1,7 @@
 <?php
-// Nettoyage du type (enlève "rsce_" si présent)
+
 $type = str_replace('rsce_', '', $this->type ?? 'team');
+
 ?>
 
 <?php if (!empty($this->team) && is_array($this->team)): ?>
@@ -10,7 +11,7 @@ $type = str_replace('rsce_', '', $this->type ?? 'team');
     <?php foreach ($this->team as $member): ?>
     <div class="team-member">
 
-        <!-- IMAGE -->
+
         <?php if (!empty($member->image)): ?>
         <?php
                 $fileModel = \Contao\FilesModel::findByUuid($member->image);
@@ -21,7 +22,6 @@ $type = str_replace('rsce_', '', $this->type ?? 'team');
         <?php endif; ?>
         <?php endif; ?>
 
-        <!-- NOM + DRAPEAU -->
         <div class="name-bold">
             <?php if (!empty($member->flag_emoji)): ?>
             <span class="team-flag-emoji"><?= htmlspecialchars($member->flag_emoji) ?></span>
@@ -36,7 +36,6 @@ $type = str_replace('rsce_', '', $this->type ?? 'team');
             <?php endif; ?>
         </div>
 
-        <!-- TEAM UNIQUEMENT -->
         <?php if ($type === 'team'): ?>
 
         <?php if (isset($member->number1) && $member->number1 !== '' || isset($member->number2) && $member->number2 !== ''): ?>
@@ -65,7 +64,6 @@ $type = str_replace('rsce_', '', $this->type ?? 'team');
 
         <?php endif; ?>
 
-        <!-- TRAINER UNIQUEMENT -->
         <?php if ($type === 'trainer'): ?>
 
         <?php if (!empty($member->position)): ?>

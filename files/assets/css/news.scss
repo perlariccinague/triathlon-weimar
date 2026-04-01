@@ -79,6 +79,19 @@
   }
 }
 
+.news.hsv1 , .news.ingwe1 {
+  .news-card:last-child {
+    border-color: $blue;
+    &:hover {
+      background: $blue;
+    }
+    .news-image {
+      top: -22px;
+    }
+  }
+}
+
+
 .news-inner {
   position: relative;
   .news-meta {
@@ -153,6 +166,15 @@
   .news::before {
     top: -14vw;
     background-size: 55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news-inner .news-image {
+    right: 0;
+    img {
+      width: 60px;
+    }
   }
 }
 

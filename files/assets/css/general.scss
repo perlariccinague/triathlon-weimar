@@ -70,7 +70,7 @@ ul {
     background: white;
     color: black;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 2px solid white;
     font: normal italic 700 24px/30px 'Exo 2';
     text-transform: uppercase;
@@ -250,6 +250,23 @@ ul {
     }
 }
 
+
+img.emoji {
+    height: 1.2em;
+    width: 1.2em;
+    margin-right: 8px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.team-flag-emoji img.emoji,
+img.emoji[alt*="flag"] {
+    height: 1.2em;
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 @media screen and (max-width: $mobile-width) {
     h1, h2 {
         font: normal italic 700 50px/56px 'Exo 2';
@@ -277,12 +294,15 @@ ul {
             flex-wrap: wrap;
         }
     }
+    .join-team-button {
+        width: 145px;
+    }
 }
 
 
 @media screen and (max-width: 480px) {
     h1, h2 {
-        font: normal italic 700 30px/36px 'Exo 2';
+        font: normal italic 700 27px/36px 'Exo 2';
     }
     p {
         font-size: 18px;
@@ -309,6 +329,9 @@ ul {
         &:after {
             bottom: -11px;
         }
+    }
+    .join-team-button {
+        width: 110px;
     }
 }
 

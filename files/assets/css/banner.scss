@@ -48,7 +48,7 @@
 .mod_article.video-teaser, .mod_article.image-teaser-block {
     position: relative;
     height: 75vh;
-    .content-player, .content-image {
+     .content-image {
         width: 100%;
         height: 100%;
         video , img {
@@ -174,8 +174,12 @@
 @media screen and (max-width: 480px)  {
     .mod_article.banner-box {
         padding: 23px 0 35px 0;
+        .content-text h2::before {
+            bottom: -15px;
+        }
     }
     .mod_article.video-teaser .content-text .rte h2::before, .mod_article.image-teaser-block .content-text .rte h2::before {
         width: 230px;
+        bottom: -15px;
     }
 }

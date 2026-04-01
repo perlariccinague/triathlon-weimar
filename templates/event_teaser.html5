@@ -1,61 +1,52 @@
-<div class="event-card layout_teaser<?= $this->classList ?>">
-  <?php if ($this->addImage): ?>
-  <div class="event-image">
-    <?php $this->insert('image', $this->arrData); ?>
-    <div class="event-badge"></div>
-  </div>
-  <?php endif; ?>
-
-  <div class="event-content">
-    <h2 class="event-title">
-      <a href="<?= $this->href ?>" title="<?= $this->title ?>"<?= $this->target ?>>
-      <?= $this->title ?>
-      </a>
-    </h2>
-
-    <div class="ce_text block">
-      <?php if (!$this->addBefore): ?>
-      <?= $this->cspInlineStyles($this->teaser) ?>
-      <?php endif; ?>
-
-      <?php if ($this->addBefore): ?>
-      <?= $this->cspInlineStyles($this->teaser) ?>
-      <?php endif; ?>
+<div class="event-card-wrapper" style="position: relative;">
+  <div class="event-card layout_teaser<?= $this->classList ?>">
+    <?php if ($this->addImage): ?>
+    <div class="event-image">
+      <?php
+      // Supprimer le lien de l'image
+      $imageData = $this->arrData;
+      $imageData['fullsize'] = false;
+      $imageData['href'] = '';
+      $this->insert('image', $imageData);
+      ?>
+      <div class="event-badge"></div>
     </div>
+    <?php endif; ?>
 
-    <div class="event-meta">
+    <div class="event-content">
+      <h2 class="event-title">
+        <?= $this->title ?>
+      </h2>
 
-      <span class="meta-item date">
-        <?php setlocale(LC_TIME, 'de_DE.UTF-8'); ?><?= strftime('%d. %B %Y', $this->startDate) ?>
-      </span>
+      <div class="ce_text block">
+        <?php if (!$this->addBefore): ?>
+        <?= $this->cspInlineStyles($this->teaser) ?>
+        <?php endif; ?>
 
-      <?php if ($this->location): ?>
-        <span class="meta-item location"><?= $this->location ?></span>
-      <?php endif; ?>
+        <?php if ($this->addBefore): ?>
+        <?= $this->cspInlineStyles($this->teaser) ?>
+        <?php endif; ?>
+      </div>
 
-      <?php if ($this->startTime): ?>
-        <span class="meta-item time">
-         <?= date('H:i', $this->startTime) ?><?php if ($this->endTime): ?>–<?= date('H:i', $this->endTime) ?><?php endif; ?>
+      <div class="event-meta">
+        <span class="meta-item date">
+          <?php setlocale(LC_TIME, 'de_DE.UTF-8'); ?><?= strftime('%d. %B %Y', $this->startDate) ?>
         </span>
-      <?php endif; ?>
 
+        <?php if ($this->location): ?>
+        <span class="meta-item location"><?= $this->location ?></span>
+        <?php endif; ?>
 
-
+        <?php if ($this->startTime): ?>
+        <span class="meta-item time">
+          <?= date('H:i', $this->startTime) ?><?php if ($this->endTime): ?>–<?= date('H:i', $this->endTime) ?><?php endif; ?>
+        </span>
+        <?php endif; ?>
+      </div>
     </div>
-
   </div>
 
- <!-- <?php if ($this->hasDetails): ?>
-    <p class="more"><a href="<?= $this->href ?>" title="<?= $this->readMore ?>"<?= $this->target ?>><?= $this->more ?><span class="invisible"> <?= $this->link ?></span></a></p>
-  <?php endif; ?>-->
-
+  <!-- Overlay cliquable -->
+  <a href="<?= $this->href ?>" title="<?= $this->title ?>"<?= $this->target ?> class="event-card-overlay" aria-label="<?= $this->title ?>" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; text-indent: -9999px;"></a>
 </div>
-
-<?php
-
-// This template is used as an event list template by default, so we only add
-// JSON-LD data in case this is an event without a reader
-if (!$this->hasReader) {
-    $this->addSchemaOrg($this->getSchemaOrgData());
-}
 

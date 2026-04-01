@@ -35,3 +35,18 @@
     }
   }
 }
+
+@media screen and (max-width: $mobile-width) {
+  .mod_article.registration {
+    .content-text {
+      margin: 0 auto;
+      p a {
+        font-size: 16px;
+      }
+    }
+    &:before {
+      top: -14vw;
+      background-size: 55%;
+    }
+  }
+}

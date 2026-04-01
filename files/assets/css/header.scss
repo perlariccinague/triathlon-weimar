@@ -58,10 +58,16 @@
                 background-color: $pink;
             }
         }
-        a.hover-logo:after {
+        .hover-logo img {
+            filter: grayscale(100%) brightness(0.7);
+        }
+      /*  a.hover-logo:after {
             width: 85%;
             left: 0;
             bottom: -12px;
+        }*/
+        .hover-content:after {
+            transform: scaleY(1);
         }
     }
 }
@@ -187,16 +193,19 @@
         display: none;
     }
     .header-left {
-        width: 70%;
-        margin-top: -4px;
+        width: 100%;
         align-items: center;
         .content-text p {
             width: 100%;
         }
+        .home-button {
+            position: relative;
+            top: 20px;
+        }
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
 
     .home-button {
         width: 35%;
