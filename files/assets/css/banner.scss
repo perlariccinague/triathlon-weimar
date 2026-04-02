@@ -188,6 +188,9 @@
             width: 600px;
         }
     }
+    .video-teaser .content-player figure video {
+        width: inherit;
+    }
 }
 
 @media screen and (max-width: 700px) {
