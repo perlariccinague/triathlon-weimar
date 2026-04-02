@@ -21,7 +21,7 @@
 .header-left {
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
     width: 45%;
     margin-top: -10px;
     margin-bottom: 20px;
@@ -72,6 +72,10 @@
     }
 }
 
+.home-button.content-image {
+    position: relative;
+    top: 13px;
+}
 .header-right ul.level_1 {
     list-style: none;
     display: flex;
