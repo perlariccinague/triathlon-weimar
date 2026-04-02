@@ -42,6 +42,7 @@
     min-height: 100px;
     display: flex;
     justify-content: center;
+    transition: all 250ms ease;
     a {
       display: flex;
       padding: 15px 20px;
@@ -52,9 +53,13 @@
       font: normal italic 700 22px/30px 'Exo 2';
       transition: all 250ms ease;
       &:hover {
-        background: black;
         color: white;
       }
+    }
+    &:hover {
+      background: black;
+      color: white;
+      border-color: black;
     }
   }
 }
