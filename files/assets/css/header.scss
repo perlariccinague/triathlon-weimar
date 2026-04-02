@@ -94,6 +94,7 @@
     strong {
         text-transform: uppercase;
         font-weight: bold;
+        color: $blue;
     }
     &.contact a {
         background: white;
@@ -214,6 +215,18 @@
         top: 45%;
         .rte p {
             font-size: 18px;
+        }
+    }
+    .header-left {
+        width: 100%;
+        align-items: center;
+        .content-text p {
+            width: 100%;
+            gap: 0;
+        }
+        .home-button {
+            position: relative;
+            top: 9px;
         }
     }
 }

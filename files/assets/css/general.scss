@@ -297,6 +297,10 @@ img.emoji[alt*="flag"] {
     .join-team-button {
         width: 145px;
     }
+    .back-to-top {
+        right: 46%;
+        bottom: 17vh;
+    }
 }
 
 
@@ -309,7 +313,7 @@ img.emoji[alt*="flag"] {
     }
 
     .content-hyperlink a, .mod_newsreader .back a, .mod_eventreader .back a, .content-text p a {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     .content-hyperlink a, .mod_newsreader .back a, .mod_eventreader .back a, .content-text p a {

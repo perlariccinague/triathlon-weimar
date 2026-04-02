@@ -281,10 +281,19 @@
     height: 60px;
     background-size: 60px;
   }
+  .event-group, .event-all {
+    .mod_eventlist {
+      flex-wrap: wrap;
+      justify-content: center;
+      .event-card-wrapper {
+        width: 45%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 670px) {
-  .events-all .mod_eventlist .event-card-wrapper {
+  .events-all .mod_eventlist .event-card-wrapper, .event-group .mod_eventlist .event-card-wrapper {
     width: 100%;
   }
   .event-title, .event-content .ce_text {
@@ -298,6 +307,6 @@
     width: 200px;
   }
   .events-all .mod_eventlist .event-card {
-    width: 100%;
+    width: 98%;
   }
 }

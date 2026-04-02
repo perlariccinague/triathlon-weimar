@@ -246,11 +246,11 @@
 
   .footer-right {
     position: relative;
-    //width: 120%;
-    width: 100%;
+    width: 107%;
     height: auto;
-    background: none;
     right: 0;
+    background: url('/files/assets/layout/Rectangle 23.svg') no-repeat;
+    background-size: cover;
   }
 
   .footer-shape {
@@ -280,10 +280,10 @@
   .footer-right .ce_form {
     max-width: 100%;
     padding-bottom: 30px;
-  }
-
-  .footer-right .ce_form form {
-    width: 100%
+    margin: 0 20px;
+    form {
+      width: 100%
+    }
   }
 
   .footer-right .widget-submit {

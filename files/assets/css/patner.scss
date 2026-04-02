@@ -206,72 +206,59 @@
 
 
 @media screen and (max-width: $mobile-width) {
-  .partner > .content-element-group > .content-element-group {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 10px;
-    margin: 0 auto;
+  .partner > .content-element-group {
+    padding-bottom: 100px;
   }
 
-  .partner > .content-element-group > .content-element-group > .content-image:first-child {
-    position: relative;
-    left: auto;
-    padding: 0;
-    margin-bottom: 15px;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
+  .partner > .content-element-group > .content-element-group {
+    width: 100%;
+    flex-wrap: wrap;
+    border-bottom: 0;
+    margin-bottom: 30px;
   }
 
   .partner > .content-element-group > .content-element-group > .content-element-group {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px 0 0 0;
-    padding: 10px 0;
-  }
-
-  .partner > .content-element-group > .content-element-group > .content-element-group > .content-image {
-    width: 40%;
-    margin: 5px;
-    justify-content: center !important;
-  }
-
-
-  .partner > .content-element-group > .content-element-group > .content-element-group > .content-text {
-    margin-top: 15px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .partner > .content-element-group > .content-element-group > .content-element-group > .content-text .rte p {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
     flex-wrap: wrap;
-    margin: 0;
+    padding: 15px 0;
+    &:last-child {
+      width: 90%;
+      margin: 0 auto;
+      .content-image {
+        width: 30%;
+        justify-content: flex-start;
+      }
+    }
+  }
+  .partner > .content-element-group > .content-element-group > .content-element-group .content-image {
+    &.main-partner {
+      width: 70%;
+      justify-content: flex-start;
+    }
+    &.arrow-right.content-image {
+      width: 20%;
+      justify-content: flex-start;
+      img {
+        width: 50px;
+      }
+    }
   }
 
-  .partner > .content-element-group > .content-element-group > .content-element-group > .content-text .rte p a:first-child {
-    opacity: 1;
-  }
-
-  .partner > .content-element-group > .content-element-group > .content-element-group > .content-text .rte p a:last-child {
-    position: relative;
-    opacity: 1;
-    order: 1;
-    display: none;
-  }
-
-  .partner > .content-element-group > .content-element-group > .content-element-group > .content-text .rte p a img {
-    width: 50px;
-    height: auto;
+  .partner > .content-element-group > .content-element-group > .content-element-group .content-image:last-child img {
+    width: 100%;
   }
 
 
+  .mod_article.partner::before, #kst::before {
+    top: -14vw;
+    height: 30vw;
+    background: url("/files/assets/layout/Mask group(3).svg") no-repeat left;
+    background-size: 75%;
+  }
+  #kst::before {
+    background: url("/files/assets/layout/Mask group(4).svg") no-repeat left;
+    background-size: 75%;
+  }
 }
 
 @media screen and (max-width: 760px) {
