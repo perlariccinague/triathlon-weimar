@@ -1,13 +1,19 @@
 <div class="news-card layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>">
 
   <div class="news-inner">
-
     <?php $this->block('info'); ?>
     <div class="news-meta">
       <time datetime="<?= $this->datetime ?>" class="news-date">
         <?= date('d.m.Y', $this->timestamp) ?>
       </time>
     </div>
+    <?php if (!empty($this->newsCategories)): ?>
+    <div class="news-categories">
+      <?php foreach ($this->newsCategories as $category): ?>
+      <span class="news-category <?= $category['cssClass'] ?>"></span>
+      <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
     <?php $this->endblock(); ?>
 
     <?php if ($this->addImage): ?>

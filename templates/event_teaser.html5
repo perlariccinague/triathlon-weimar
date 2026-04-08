@@ -1,9 +1,10 @@
 <div class="event-card-wrapper" style="position: relative;">
   <div class="event-card layout_teaser<?= $this->classList ?>">
     <?php if ($this->addImage): ?>
+    <?php var_dump($this->eventCategories); ?>
+
     <div class="event-image">
       <?php
-      // Supprimer le lien de l'image
       $imageData = $this->arrData;
       $imageData['fullsize'] = false;
       $imageData['href'] = '';
