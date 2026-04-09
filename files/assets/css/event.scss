@@ -39,12 +39,8 @@
       color: white;
     }
   }
-  &.kst {
+  &:has(.kst) {
     border-color: $pink;
-    &:hover {
-      background: $pink;
-      color: white;
-    }
   }
 }
 
@@ -54,7 +50,7 @@
 }
 
 
-.event-card-wrapper:hover .event-card.kst {
+.event-card-wrapper:hover .event-card:has(.kst) {
   background: $pink;
 }
 
@@ -84,15 +80,15 @@
   background-repeat: no-repeat;
 }
 
-.event-card.hsv .event-badge {
+.event-card .event-badge:has(.hsv){
   background-image: url('/files/assets/layout/logo-hsv-blau.svg');
 }
 
-.event-card.ingWe .event-badge {
+.event-card .event-badge:has(.ingwe) {
   background-image: url('/files/assets/layout/logo-ing-we-blau.svg');
 }
 
-.event-card.kst .event-badge {
+.event-card .event-badge:has(.kst) {
   background-image: url('/files/assets/layout/logo-kst-pink.svg') ;
   top: -6px;
 }
@@ -269,46 +265,12 @@
   }
 }
 
-
-.event-filters {
-  padding-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.event-group .category-filter li a {
+  color: black;
 }
 
-
-.event-filters .filter-btn {
-  background: transparent;
-  padding: 8px 18px;
-  border: 2px solid $blue;
-  cursor: pointer;
-  font: normal normal 400 20px/30px 'Exo 2';
-  transition: all 250ms ease;
-  &:hover, &.active {
-    background: $blue;
-    color: white;
-  }
-}
-
-.event-filters .filter-btn[data-filter="kst"] {
-  border-color: $pink;
-  &:hover, &.active {
-    background: $pink;
-  }
-}
-
-.event-filters .reset-btn {
-  font-size: 25px;
-  font-weight: 900;
-  line-height: 1;
-  padding: 5px 12px;
-  background-color: transparent;
-  display: none;
-}
-
-.event-filters .reset-btn:hover {
-  color: $blue;
+.event-group .category-filter li:hover a {
+  color: white;
 }
 
 @media screen and (max-width: $mobile-width) {
@@ -355,5 +317,8 @@
   }
   .events-all .mod_eventlist .event-card {
     width: 98%;
+  }
+  .category-filter {
+    gap: 10px;
   }
 }

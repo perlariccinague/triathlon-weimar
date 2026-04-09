@@ -1,0 +1,14 @@
+<ul class="category-filter">
+    {% for category in categories %}
+        <li class="{% if category.active %}active{% endif %}">
+            <a href="{{ category.url }}"
+               class="{{ category.cssClass }}">
+                {{ category.name }}
+            </a>
+        </li>
+    {% endfor %}
+    <li class="{% if not activeCategory %}active{% endif %}">
+        <a href="{{ allUrl }}" class="reset">&times;</a>
+    </li>
+</ul>
+

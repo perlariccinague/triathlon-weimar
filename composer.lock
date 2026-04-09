@@ -4068,16 +4068,16 @@
         },
         {
             "name": "klapproth-koch/contao-event-news-categories",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SamesOfAm/contao-event-news-categories.git",
-                "reference": "19f64c1224c8e92fa78f91367f237d27127bf628"
+                "reference": "d56a6f1a2990d6d0b5a6cd741238c8de557c175c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/19f64c1224c8e92fa78f91367f237d27127bf628",
-                "reference": "19f64c1224c8e92fa78f91367f237d27127bf628",
+                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/d56a6f1a2990d6d0b5a6cd741238c8de557c175c",
+                "reference": "d56a6f1a2990d6d0b5a6cd741238c8de557c175c",
                 "shasum": ""
             },
             "require": {
@@ -4102,9 +4102,9 @@
             "description": "Adds categories to Contao 5 news and events",
             "support": {
                 "issues": "https://github.com/SamesOfAm/contao-event-news-categories/issues",
-                "source": "https://github.com/SamesOfAm/contao-event-news-categories/tree/v1.0.3"
+                "source": "https://github.com/SamesOfAm/contao-event-news-categories/tree/v1.0.4"
             },
-            "time": "2026-04-08T12:39:52+00:00"
+            "time": "2026-04-09T08:20:26+00:00"
         },
         {
             "name": "knplabs/knp-menu",
