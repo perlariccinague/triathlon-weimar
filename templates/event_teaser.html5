@@ -1,8 +1,6 @@
 <div class="event-card-wrapper" style="position: relative;">
   <div class="event-card layout_teaser<?= $this->classList ?>">
     <?php if ($this->addImage): ?>
-    <?php var_dump($this->eventCategories); ?>
-
     <div class="event-image">
       <?php
       $imageData = $this->arrData;

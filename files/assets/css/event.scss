@@ -222,6 +222,53 @@
 }
 
 
+.category-filter {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 45px;
+  li {
+    background: transparent;
+    padding: 10px;
+    border: 2px solid $blue;
+    cursor: pointer;
+    font: normal normal 400 20px/30px 'Exo 2';
+    transition: all 250ms ease;
+    text-transform: uppercase;
+    a {
+      color: white;
+      &.reset {
+        font-size: 80px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        top: -7px;
+        position: relative;
+      }
+    }
+    &:hover, &.active {
+      background: $blue;
+      color: white;
+    }
+  }
+}
+
+.category-filter li:has(.kst) {
+  border-color: $pink;
+  &:hover, &.active {
+    background: $pink;
+  }
+}
+
+.category-filter li:has(.reset) {
+  border-color: #fff;
+  &:hover, &.active {
+   border-color: $blue;
+  }
+}
+
 
 .event-filters {
   padding-top: 30px;
