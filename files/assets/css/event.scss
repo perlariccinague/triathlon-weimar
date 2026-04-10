@@ -49,17 +49,13 @@
   color: white;
 }
 
-
 .event-card-wrapper:hover .event-card:has(.kst) {
   background: $pink;
 }
 
-
 .event-card-wrapper:hover .event-card.hsv, .event-card-wrapper:hover .event-card.ingWe{
   background: $blue;
 }
-
-
 
 .event-image {
   position: relative;
