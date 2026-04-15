@@ -23,7 +23,7 @@
       }
     }
   }
-  .content-element-group {
+  .team-grid {
     display: flex;
     width: 90%;
     max-width: 1180px;
@@ -33,19 +33,11 @@
   }
 }
 
-
-
-
-
-.team-grid {
-  margin-bottom: 20px;
-  width: 22%;
-}
-
-
 .team-member {
   padding: 15px 0;
   text-align: center;
+  margin-bottom: 20px;
+  width: 22%;
 }
 
 
@@ -95,9 +87,9 @@
 }
 
 @media (max-width: 767px) {
-  .mod_article.team .content-element-group {
+  .mod_article.team .team-grid {
     flex-wrap: wrap;
-    .team-grid {
+    .team-member {
       width: 45%;
     }
   }
@@ -108,7 +100,7 @@
   .team-member, .team-grid  {
     width: 100%;
   }
-  .mod_article.team .content-element-group .team-grid {
+  .mod_article.team .team-grid .team-member {
     width: 100%;
   }
 }

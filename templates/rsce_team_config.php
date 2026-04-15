@@ -7,7 +7,6 @@ return [
 
     'fields' => [
 
-        // TYPE (IMPORTANT)
         'type' => [
             'label' => ['Type', 'Team oder Trainer'],
             'inputType' => 'select',
@@ -19,7 +18,6 @@ return [
             'default' => 'team',
         ],
 
-        // LISTE DES MEMBRES
         'team' => [
             'label' => ['Mitglieder', ''],
             'inputType' => 'list',
@@ -47,7 +45,6 @@ return [
                     'eval' => ['mandatory' => true],
                 ],
 
-                // TEAM FIELDS
                 'number1' => [
                     'label' => ['1. LIGA', ''],
                     'inputType' => 'text',
@@ -66,7 +63,6 @@ return [
                     'eval' => ['rgxp' => 'digit', 'tl_class' => 'w50'],
                 ],
 
-                // TRAINER FIELDS
                 'position' => [
                     'label' => ['Position', 'z.B Trainer, Teammanager'],
                     'inputType' => 'text',
@@ -79,7 +75,6 @@ return [
                     'eval' => ['rgxp' => 'email', 'tl_class' => 'w50'],
                 ],
 
-                // COMMUN
                 'description' => [
                     'label' => ['Description', ''],
                     'inputType' => 'text',
