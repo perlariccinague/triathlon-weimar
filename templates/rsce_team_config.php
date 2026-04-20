@@ -94,6 +94,7 @@ return [
                         '🇪🇸' => 'Spanien',
                         '🇬🇧' => 'Vereinigtes Königreich',
                         '🇺🇸' => 'USA',
+                        "\u{1F3F4}\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}" => 'Schottland',
                     ],
                     'eval' => ['includeBlankOption' => true, 'tl_class' => 'w50'],
                 ],

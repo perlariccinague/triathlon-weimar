@@ -92,8 +92,11 @@
 .event-content {
   padding: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   .ce_text {
-    min-height: 200px;
+    flex: 1;
   }
 }
 
@@ -157,7 +160,8 @@
   }
 }
 
-.event-group .content-hyperlink a, .mod_eventreader .back a {
+.event-group .content-hyperlink a, .mod_eventreader .back a,
+.events-all .content-hyperlink a {
   background: black;
   color: white;
   &:hover {
@@ -190,6 +194,7 @@
   width: 90%;
   margin: 0 auto;
   max-width: $max-width;
+  padding: 50px 0;
   h2 {
     &:before, &:after {
       background: black;
@@ -203,16 +208,26 @@
       bottom: -22px;
     }
   }
-  .mod_eventlist {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-    .event-card-wrapper {
-      width:32%;
+}
+
+.events-all:has(+ .mod_article) {
+  padding: 0;
+}
+
+.mod_eventlist {
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  .event-card-wrapper {
+    width: calc((100% - 40px) / 3);
+    display: flex;
+    .event-card {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
   }
 }
-
 
 .category-filter {
   padding-top: 30px;
@@ -227,7 +242,7 @@
     cursor: pointer;
     font: normal normal 400 20px/30px 'Exo 2';
     transition: all 250ms ease;
-    text-transform: uppercase;
+
     a {
       color: white;
       &.reset {

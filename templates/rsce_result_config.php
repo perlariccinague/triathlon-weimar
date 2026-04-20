@@ -33,20 +33,11 @@ return array(
             'inputType' => 'text',
         ),
         'link_url' => array(
-            'label' => ['Externer Link', 'URL eingeben'],
+            'label' => ['Interne Link', 'URL eingeben'],
             'inputType' => 'url',
             'eval' => [
                 'rgxp' => 'url',
                 'decodeEntities' => true,
-                'tl_class' => 'w50'
-            ],
-        ),
-
-        'link_page' =>array(
-            'label' => ['Interne Seite', 'Seite auswählen'],
-            'inputType' => 'pageTree',
-            'eval' => [
-                'fieldType' => 'radio',
                 'tl_class' => 'w50'
             ],
         ),

@@ -84,6 +84,10 @@
   }
 }
 
+.layout_full .content-accordion {
+  width: 100%;
+}
+
 @media screen and (max-width: $mobile-width)  {
   .content-accordion .handorgel__header, .content-accordion .handorgel__content {
     width: 100%;
