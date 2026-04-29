@@ -39,3 +39,22 @@ function scrollToTop() {
 
     requestAnimationFrame(animate);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".join-team-button a");
+
+    if (!button) return;
+
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const footer = document.querySelector("footer");
+
+        if (footer) {
+            footer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    });
+});

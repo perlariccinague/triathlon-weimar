@@ -33,35 +33,66 @@
   width: 90%;
   margin: 0 auto;
   align-items: center;
-  .content-download {
-    width: 18%;
-    font-size: 20px;
-    border: 2px solid currentColor;
-    margin: 10px auto;
-    text-align: center;
-    min-height: 100px;
+}
+
+.map-routes > .content-element-group > .content-element-group > .content-download {
+  width: 18%;
+  font-size: 20px;
+  border: 2px solid currentColor;
+  margin: 10px auto;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  transition: all 250ms ease;
+  a {
     display: flex;
+    padding: 15px 20px;
     justify-content: center;
+    color: black;
+    min-height: 60px;
+    align-items: center;
+    border: 0;
+    font: normal italic 700 22px/30px 'Exo 2';
     transition: all 250ms ease;
-    a {
-      display: flex;
-      padding: 15px 20px;
-      justify-content: center;
-      color: black;
-      min-height: 60px;
-      align-items: center;
-      font: normal italic 700 22px/30px 'Exo 2';
-      transition: all 250ms ease;
-      &:hover {
-        color: white;
-      }
-    }
     &:hover {
-      background: black;
       color: white;
-      border-color: black;
     }
   }
+  &:hover {
+    background: black;
+    color: white;
+    border-color: black;
+  }
+}
+
+
+.content-download, .content-downloads {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.content-download a, .content-downloads ul li a{
+  padding: 12px 16px;
+  border: 2px solid black;
+  background: transparent;
+  display: inline-block;
+
+  text-transform: uppercase;
+  font: normal italic 700 24px/30px "Exo 2";
+  transition: background-color 250ms ease, border 250ms ease;
+  &:hover {
+    background: $pink;
+    border: 2px solid $pink;
+  }
+}
+
+.content-downloads ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 @media screen and (max-width: 1200px) {

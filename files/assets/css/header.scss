@@ -61,11 +61,6 @@
         .hover-logo img {
             filter: grayscale(100%) brightness(0.7);
         }
-      /*  a.hover-logo:after {
-            width: 85%;
-            left: 0;
-            bottom: -12px;
-        }*/
         .hover-content:after {
             transform: scaleY(1);
         }
@@ -165,19 +160,6 @@
     }
 }
 
-
-/*.header-left .rte a img {
-    filter: grayscale(100%) brightness(0.7);
-}
-
-.header-left .rte a.active img {
-    filter: none;
-}
-
-.header-left .rte a.active:after {
-    transform: scaleY(1);
-}*/
-
 .header-left .rte a.active-home img {
     filter: none;
 }
@@ -188,6 +170,13 @@
 
 .mobile-only {
     display: none;
+}
+
+@media screen and (max-width: 1500px) {
+    .header-image .content-text .rte p {
+        font-size: 20px;
+        line-height: 1.3em;
+    }
 }
 
 @media screen and (max-width: $mobile-width) {
