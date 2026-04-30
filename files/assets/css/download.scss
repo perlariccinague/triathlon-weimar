@@ -44,6 +44,7 @@
   min-height: 100px;
   display: flex;
   justify-content: center;
+  padding-bottom: 0;
   transition: all 250ms ease;
   a {
     display: flex;
@@ -54,6 +55,7 @@
     align-items: center;
     border: 0;
     font: normal italic 700 22px/30px 'Exo 2';
+    text-transform: inherit;
     transition: all 250ms ease;
     &:hover {
       color: white;
