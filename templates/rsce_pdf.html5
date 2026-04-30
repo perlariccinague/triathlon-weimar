@@ -1,0 +1,21 @@
+<?php
+use Contao\FilesModel;
+
+$fileModel = \Contao\FilesModel::findByUuid($this->file);
+$pdfPath = $fileModel ? $fileModel->path : '';
+?>
+
+
+<?php if ($pdfPath): ?>
+<div class="pdf-reader">
+    <object
+            data="<?= htmlspecialchars($pdfPath) ?>"
+            type="application/pdf"
+    >
+        <p class="pdf-fallback">
+            nscheinend ist kein PDF-Viewer in Ihrem Browser verfügbar.
+            <a href="<?= htmlspecialchars($pdfPath) ?>" download>PDF herunterladen</a>
+        </p>
+    </object>
+</div>
+<?php endif; ?>

@@ -42,9 +42,6 @@
     text-align: center;
 }
 
-
-
-
 .mod_article.video-teaser, .mod_article.image-teaser-block {
     position: relative;
     //height: 75vh;
@@ -103,6 +100,12 @@
         img {
             object-fit: cover;
         }
+    }
+}
+
+.mod_article.image-teaser-block p a, .mod_article.header-image p a{
+    &:hover {
+        background-color: transparent;
     }
 }
 

@@ -71,7 +71,7 @@ ul {
     color: black;
     padding: 10px 20px;
     border-radius: 30px;
-    border: 2px solid white;
+    border: 2px solid black;
     font: normal italic 700 24px/30px 'Exo 2';
     text-transform: uppercase;
     cursor: pointer;
@@ -247,6 +247,27 @@ ul {
         &:before {
             background: white;
         }
+    }
+}
+
+.bg-blue-gradient, .bg-blue, .mod_article.image-teaser-block,
+.partner {
+    .content-hyperlink a, p a {
+        border-color: white;
+    }
+}
+
+.mod_article.dark {
+    background-color: black;
+    h2 {
+        color: white;
+    }
+}
+
+.mod_article p a {
+    &:hover {
+        color: white;
+        background-color: black;
     }
 }
 
