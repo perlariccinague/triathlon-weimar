@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f00451c9bcd47cf6cddf34c8157e3e2e",
+    "content-hash": "f7c5daea21ccdfef4464742020867854",
     "packages": [
         {
             "name": "ausi/slug-generator",
@@ -4068,16 +4068,16 @@
         },
         {
             "name": "klapproth-koch/contao-event-news-categories",
-            "version": "v1.0.10",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SamesOfAm/contao-event-news-categories.git",
-                "reference": "6823835cf9509babc04bacc6a8c3eeec5a0c059f"
+                "reference": "12fa2d2d6cfa89922b568ee0dfa1bd8ddecdaf37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/6823835cf9509babc04bacc6a8c3eeec5a0c059f",
-                "reference": "6823835cf9509babc04bacc6a8c3eeec5a0c059f",
+                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/12fa2d2d6cfa89922b568ee0dfa1bd8ddecdaf37",
+                "reference": "12fa2d2d6cfa89922b568ee0dfa1bd8ddecdaf37",
                 "shasum": ""
             },
             "require": {
@@ -4102,9 +4102,9 @@
             "description": "Adds categories to Contao 5 news and events",
             "support": {
                 "issues": "https://github.com/SamesOfAm/contao-event-news-categories/issues",
-                "source": "https://github.com/SamesOfAm/contao-event-news-categories/tree/v1.0.10"
+                "source": "https://github.com/SamesOfAm/contao-event-news-categories/tree/v1.1.2"
             },
-            "time": "2026-04-10T16:57:21+00:00"
+            "time": "2026-04-30T09:15:59+00:00"
         },
         {
             "name": "knplabs/knp-menu",

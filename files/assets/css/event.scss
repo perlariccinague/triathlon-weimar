@@ -276,6 +276,24 @@
   }
 }
 
+.event-group.hsv-filter .category-filter li {
+  border: 2px solid #E8E000;
+  &:hover {
+    background-color: #E8E000;
+    a {
+      color: black;
+    }
+  }
+}
+
+.event-group.hsv-filter .category-filter li.active {
+  background-color: #E8E000;
+}
+
+.event-group.hsv-filter .category-filter li:last-child:not(.active) {
+  border-color: black;
+}
+
 .event-group .category-filter li a {
   color: black;
 }
