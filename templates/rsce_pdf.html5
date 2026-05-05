@@ -18,4 +18,10 @@ $pdfPath = $fileModel ? $fileModel->path : '';
         </p>
     </object>
 </div>
+
+<div class="mobile-only pdf-reader-mobile">
+    <a href="<?= htmlspecialchars($pdfPath) ?>" target="_blank">
+        PDF herunterladen
+    </a>
+</div>
 <?php endif; ?>
