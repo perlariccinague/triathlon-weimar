@@ -27,7 +27,7 @@
     <p class="info recurring"><?= $this->recurring ?></p>
     <?php else: ?>
     <p class="info">
-        <span class="meta-item date"><?= date('d. F Y', $this->startDate) ?></span>
+        <span class="meta-item date"><?= \Contao\Date::parse('d. F Y', $this->startDate) ?></span>
     </p>
     <?php if ($this->startTime): ?>
     <p class="meta-item time"><?= date('H:i', $this->startTime) ?>
