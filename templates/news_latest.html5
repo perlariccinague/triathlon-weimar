@@ -1,4 +1,5 @@
-<div class="news-card layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+<div class="news-card layout_latest arc_<?= $this->archive->id ?> block<?= $this->class ?>"
+     onclick="window.location.href='<?= $this->link ?>'">
 
   <div class="news-inner">
     <?php $this->block('info'); ?>

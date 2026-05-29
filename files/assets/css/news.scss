@@ -26,6 +26,11 @@
   filter: brightness(0) invert(1);
 }
 
+.news-card:hover .news-content a {
+  color: white;
+  opacity: .6;
+}
+
 .news-title {
   &:before, &:after {
     display: none;
@@ -164,6 +169,21 @@
       border: 2px solid #000;
       background: rgba(0,0,0,0);
     }
+  }
+}
+
+.news-content.ce_text a {
+  color: $blue;
+}
+
+.mod_article .layout_full .content-text a {
+  padding: 0;
+  border-radius: 0;
+  text-transform: inherit;
+  border: 0;
+  &:hover {
+    background: none;
+    color: $blue;
   }
 }
 
