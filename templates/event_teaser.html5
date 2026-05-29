@@ -35,7 +35,7 @@
 
       <div class="event-meta">
         <span class="meta-item date">
-          <?= \Contao\Date::parse('d. F Y', $this->startDate) ?>
+          <?php setlocale(LC_TIME, 'de_DE.UTF-8'); ?><?= strftime('%d. %B %Y', $this->startDate) ?>
         </span>
 
         <?php if ($this->location): ?>
