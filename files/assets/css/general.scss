@@ -264,12 +264,13 @@ ul {
     }
 }
 
-.mod_article:not(.header-image, .image-teaser-block, .bg-blue-gradient) p a {
+.mod_article:not(.header-image, .image-teaser-block, .bg-blue-gradient, .bg-blue-space, .news) p a {
     color: white;
     background-color: black;
     &:hover {
         color: black;
         background-color: transparent;
+        border: 2px solid #000;
     }
 }
 
