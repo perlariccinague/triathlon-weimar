@@ -1,7 +1,7 @@
 <div class="slider-teaser <?= htmlspecialchars($this->cssID) ?>">
 
     <?php if ($this->link): ?>
-    <a href="<?= htmlspecialchars($this->link) ?>" target="_blank" rel="noopener noreferrer">
+    <a href="<?= htmlspecialchars($this->link) ?>" rel="noopener noreferrer">
         <?php endif; ?>
 
         <?php if ($this->image && ($image = \Contao\FilesModel::findByUuid($this->image))): ?>
