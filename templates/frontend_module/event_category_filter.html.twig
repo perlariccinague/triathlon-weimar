@@ -1,7 +1,7 @@
 <ul class="category-filter">
     {% for category in categories %}
         <li class="{% if category.active %}active{% endif %}">
-            <a href="{{ category.url }}"
+            <a href="{{ category.url }}#event"
                class="{{ category.cssClass }}">
                 {{ category.name }}
             </a>
@@ -11,4 +11,5 @@
         <a href="{{ allUrl }}" class="reset">&times;</a>
     </li>
 </ul>
+
 
