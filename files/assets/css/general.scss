@@ -264,7 +264,8 @@ ul {
     }
 }
 
-.mod_article:not(.header-image, .image-teaser-block, .bg-blue-gradient, .bg-blue-space, .news) p a {
+.mod_article:not(.header-image, .image-teaser-block, .bg-blue-gradient, .bg-blue-space,
+ .news, .content-accordion .handorgel__content .handorgel__content__inner ) p a {
     color: white;
     background-color: black;
     &:hover {

@@ -1,3 +1,4 @@
+/*
 const filterButtons = document.querySelectorAll('.filter-btn');
 const resetButton = document.querySelector('.reset-btn');
 const events = document.querySelectorAll('.event-card');
@@ -23,4 +24,7 @@ resetButton.addEventListener('click', () => {
     events.forEach(event => event.style.display = '');
     filterButtons.forEach(btn => btn.classList.remove('active'));
     resetButton.style.display = 'none';
-});
+});*/
+
+
+
