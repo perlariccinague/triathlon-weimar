@@ -196,6 +196,28 @@
     }
 }
 
+@media screen and (max-width: 800px) {
+    .image-teaser-block {
+        .button-kst {
+            .rte > p:last-of-type {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                width: 70%;
+                margin: 0 auto;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    margin: -14px auto;
+                    box-sizing: border-box;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
     .mod_article.banner-box.live .content-text h2 {
         &:after {
