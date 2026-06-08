@@ -90,12 +90,13 @@
 
 .mod_article .content-accordion .handorgel__content .handorgel__content__inner p a,
 .mod_article.teaser-content .content-text p a {
-  background: none;
+  background: none !important;
   border: 0 !important;
-  color: $blue;
+  color: $blue !important;
   padding: 0;
   border-radius: 0;
-  font: normal italic 700 20px/24px "Exo 2";;
+  font: normal italic 700 20px/24px "Exo 2";
+  text-transform: inherit;
   transition: all 500ms ease;
   &:hover {
     opacity: .7;
