@@ -95,10 +95,30 @@ function filterEvents() {
    5. SCROLL PRO (UNIFIÉ)
 ========================================================= */
 function scrollToBlock() {
-    const block = getEventBlock();
-    if (!block) return;
+    const blocks = document.querySelectorAll('.event-group');
 
-    const y = block.getBoundingClientRect().top + window.pageYOffset;
+    let target = null;
+
+    blocks.forEach(block => {
+        const events = block.querySelectorAll('.event-card-wrapper');
+
+        // on prend le bloc qui contient des events visibles
+        const hasVisibleEvents = Array.from(events).some(ev =>
+            ev.style.display !== 'none'
+        );
+
+        if (hasVisibleEvents && !target) {
+            target = block;
+        }
+    });
+
+    if (!target) {
+        target = document.querySelector('.event-group');
+    }
+
+    if (!target) return;
+
+    const y = target.getBoundingClientRect().top + window.pageYOffset;
 
     window.scrollTo({
         top: y - 10,
