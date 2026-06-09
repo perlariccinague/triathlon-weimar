@@ -26,5 +26,133 @@ resetButton.addEventListener('click', () => {
     resetButton.style.display = 'none';
 });*/
 
+console.log('Global event filter loaded');
 
+/* =========================================================
+   1. STOP SCROLL AUTO NAVIGATOR
+========================================================= */
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+/* =========================================================
+   2. DETECTEUR GLOBAL BLOCK (TOUS CONTENUS CONTao)
+========================================================= */
+function getEventBlock() {
+    return document.querySelector('#event, #article-44, #article-58, .event-group');
+}
+
+/* =========================================================
+   3. CATEGORY FROM URL
+========================================================= */
+function getCategoryFromURL() {
+    return new URLSearchParams(window.location.search).get('category');
+}
+
+/* =========================================================
+   4. FILTER UNIVERSAL
+========================================================= */
+function filterEvents() {
+    const category = getCategoryFromURL();
+
+    const block = getEventBlock();
+    if (!block) return;
+
+    const events = block.querySelectorAll('.event-card-wrapper');
+
+    // reset
+    events.forEach(ev => ev.style.display = '');
+
+    if (!category) return;
+
+    console.log('Filtrage catégorie:', category);
+
+    let visibleCount = 0;
+
+    events.forEach(ev => {
+        const badges = ev.querySelectorAll('.event-badge span');
+
+        let match = false;
+
+        badges.forEach(b => {
+            if (b.classList.contains(category)) {
+                match = true;
+            }
+        });
+
+        if (match) {
+            ev.style.display = '';
+            visibleCount++;
+        } else {
+            ev.style.display = 'none';
+        }
+    });
+
+    console.log('Événements visibles:', visibleCount);
+}
+
+/* =========================================================
+   5. SCROLL PRO (UNIFIÉ)
+========================================================= */
+function scrollToBlock() {
+    const block = getEventBlock();
+    if (!block) return;
+
+    const y = block.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+        top: y - 10,
+        behavior: 'auto'
+    });
+}
+
+/* =========================================================
+   6. CLICK CATEGORY FILTER (GLOBAL)
+========================================================= */
+document.querySelectorAll('.category-filter a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const url = new URL(this.href);
+        const category = url.searchParams.get('category');
+
+        history.pushState({}, '', this.href);
+
+        filterEvents();
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                scrollToBlock();
+            });
+        });
+    });
+});
+
+/* =========================================================
+   7. BACK / FORWARD NAVIGATION
+========================================================= */
+window.addEventListener('popstate', () => {
+    filterEvents();
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            scrollToBlock();
+        });
+    });
+});
+
+/* =========================================================
+   8. INITIAL LOAD
+========================================================= */
+window.addEventListener('load', () => {
+    filterEvents();
+
+    if (getCategoryFromURL()) {
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                scrollToBlock();
+            });
+        });
+    }
+});
 
