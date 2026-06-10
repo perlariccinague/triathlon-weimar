@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f7c5daea21ccdfef4464742020867854",
+    "content-hash": "5078bf4ec6b9d87674d1aa3c7e76bda0",
     "packages": [
         {
             "name": "ausi/slug-generator",
@@ -4068,16 +4068,16 @@
         },
         {
             "name": "klapproth-koch/contao-event-news-categories",
-            "version": "v1.1.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SamesOfAm/contao-event-news-categories.git",
-                "reference": "18e86901f551321d27f0bcb7d6594fa737459556"
+                "reference": "ae24540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/18e86901f551321d27f0bcb7d6594fa737459556",
-                "reference": "18e86901f551321d27f0bcb7d6594fa737459556",
+                "url": "https://api.github.com/repos/SamesOfAm/contao-event-news-categories/zipball/ae24540",
+                "reference": "ae24540",
                 "shasum": ""
             },
             "require": {
@@ -4086,6 +4086,7 @@
                 "contao/news-bundle": "^5.7",
                 "php": "^8.1"
             },
+            "default-branch": true,
             "type": "contao-bundle",
             "extra": {
                 "contao-manager-plugin": "KlapprothKoch\\ContaoEventNewsCategories\\ContaoManager\\Plugin"
@@ -15212,7 +15213,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "contao/conflicts": 20
+        "contao/conflicts": 20,
+        "klapproth-koch/contao-event-news-categories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

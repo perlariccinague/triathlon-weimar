@@ -78,7 +78,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php84" />
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/php-feed-io/feed-io" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
@@ -200,6 +199,7 @@
       <path value="$PROJECT_DIR$/vendor/madeyourday/contao-rocksolid-custom-elements" />
       <path value="$PROJECT_DIR$/vendor/codefog/contao-mobile_menu" />
       <path value="$PROJECT_DIR$/vendor/contao-community-alliance/composer-plugin" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/klapproth-koch/contao-event-news-categories" />
     </include_path>
   </component>

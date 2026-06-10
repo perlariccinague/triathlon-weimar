@@ -2,5 +2,24 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/ace" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/altcha" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/choices" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/colorbox" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/contao" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/datepicker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/dropzone" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/handorgel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/jquery" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/jquery-ui" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/mediabox" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/mootools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/simplemodal" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/swipe" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/swiper" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/tablesort" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/tablesorter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/tinymce4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/assets/tristen-tablesort" vcs="Git" />
   </component>
 </project>
