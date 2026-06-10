@@ -18,7 +18,6 @@
 {% set isHomePage = app.request.pathinfo == '/startseite' or app.request.pathinfo == '/' %}
 
 {% if isHomePage %}
-     PAGE D'ACCUEIL - Filtres par parentGroup
     {% set currentParentGroup = app.request.get('parentGroup') %}
     {% set parentGroups = ['hsv', 'ingwe', 'kst'] %}
     <ul class="category-filter">
@@ -35,7 +34,6 @@
     </ul>
 
 {% else %}
-     SOUS-PAGES - Filtres par category
     <ul class="category-filter">
         {% for category in categories %}
             <li class="{% if category.active %}active{% endif %}">
