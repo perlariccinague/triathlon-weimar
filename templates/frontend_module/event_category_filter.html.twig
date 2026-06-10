@@ -1,3 +1,4 @@
+{#
 <ul class="category-filter">
     {% for category in categories %}
         <li class="{% if category.active %}active{% endif %}">
@@ -11,6 +12,43 @@
         <a href="{{ allUrl }}" class="reset">&times;</a>
     </li>
 </ul>
+#}
+
+
+{% set isHomePage = app.request.pathinfo == '/startseite' or app.request.pathinfo == '/' %}
+
+{% if isHomePage %}
+     PAGE D'ACCUEIL - Filtres par parentGroup
+    {% set currentParentGroup = app.request.get('parentGroup') %}
+    {% set parentGroups = ['hsv', 'ingwe', 'kst'] %}
+    <ul class="category-filter">
+        {% for group in parentGroups %}
+            <li class="{% if currentParentGroup == group %}active{% endif %}">
+                <a href="{{ app.request.getBaseUrl() }}/startseite?parentGroup={{ group }}#event" class="{{ group }}">
+                    {{ group|upper }}
+                </a>
+            </li>
+        {% endfor %}
+        <li class="{% if not currentParentGroup %}active{% endif %}">
+            <a href="{{ app.request.getBaseUrl() }}/startseite#event" class="reset">×</a>
+        </li>
+    </ul>
+
+{% else %}
+     SOUS-PAGES - Filtres par category
+    <ul class="category-filter">
+        {% for category in categories %}
+            <li class="{% if category.active %}active{% endif %}">
+                <a href="{{ category.url }}#event" class="{{ category.cssClass }}">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+        <li class="{% if not activeCategory %}active{% endif %}">
+            <a href="{{ allUrl }}" class="reset">&times;</a>
+        </li>
+    </ul>
+{% endif %}
 
 
 
