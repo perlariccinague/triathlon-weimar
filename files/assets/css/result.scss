@@ -16,7 +16,7 @@
   .result-link {
     color: black;
     border: 2px solid currentColor;
-    width: 23%;
+    width: 24%;
     text-align: center;
     padding: 15px 0;
     transition: all 250ms ease;
@@ -46,7 +46,7 @@
          &:before {
            content: "";
            position: absolute;
-           left: 0;
+           left: 10px;
            width: 20px;
            height: 20px;
            top: 8px;
