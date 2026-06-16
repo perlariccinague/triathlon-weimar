@@ -66,7 +66,7 @@ ul {
 }
 
 .content-hyperlink a, .mod_newsreader .back a,
-.mod_eventreader .back a {
+.mod_eventreader .back a, #main .mod_article.image-teaser-block .content-text a {
     background: white;
     color: black;
     padding: 10px 20px;
@@ -83,7 +83,9 @@ ul {
     }
 }
 
-
+#main .mod_article.image-teaser-block .content-text a {
+    border-color: white;
+}
 
 .mod_newsreader .back, .mod_eventreader .back{
     width: 90%;
