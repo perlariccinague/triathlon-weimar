@@ -66,7 +66,7 @@ ul {
 }
 
 .content-hyperlink a, .mod_newsreader .back a,
-.mod_eventreader .back a, .content-text p a{
+.mod_eventreader .back a {
     background: white;
     color: black;
     padding: 10px 20px;
@@ -176,7 +176,8 @@ ul {
             justify-content: center;
             align-items: center;
             width: 25%;
-            font-size: 20px;
+            text-transform: uppercase;
+            font: normal italic 700 20px/30px 'Exo 2';
             border: 2px solid currentColor;
             &:hover {
                 background: black;
