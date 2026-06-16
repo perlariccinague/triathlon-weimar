@@ -280,9 +280,13 @@ ul {
     }
 }
 
-.mod_article .content-text p a {
+#main .mod_article .content-text p a {
     color: $blue;
     background: none;
+    transition: all 250ms ease;
+    &:hover {
+        opacity: .7;
+    }
 }
 
 
