@@ -271,12 +271,13 @@ ul {
 
 
 
-#main .mod_article .content-text p a {
+#main .mod_article:not(.bg-blue-gradient) .content-text p a {
     color: $blue;
     background: none;
     transition: all 250ms ease;
     &:hover {
         opacity: .7;
+        border: none;
     }
 }
 
