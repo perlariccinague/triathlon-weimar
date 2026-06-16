@@ -269,6 +269,17 @@ ul {
     }
 }
 
+
+
+#main .mod_article .content-text p a {
+    color: $blue;
+    background: none;
+    transition: all 250ms ease;
+    &:hover {
+        opacity: .7;
+    }
+}
+
 .mod_article:not(.header-image, .image-teaser-block, .bg-blue-gradient, .bg-blue-space,
  .news, .content-accordion .handorgel__content .handorgel__content__inner ) p a {
     color: white;
@@ -277,15 +288,6 @@ ul {
         color: black;
         background-color: transparent;
         border: 2px solid #000;
-    }
-}
-
-#main .mod_article .content-text p a {
-    color: $blue;
-    background: none;
-    transition: all 250ms ease;
-    &:hover {
-        opacity: .7;
     }
 }
 
