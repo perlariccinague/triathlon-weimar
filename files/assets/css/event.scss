@@ -61,9 +61,15 @@
   position: relative;
   padding: 18px 10px;
   min-height: 232px;
-  img {
-    width: 100%;
-    display: block;
+  height: 370px;
+  figure {
+    height: 100%;
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 100%;
+    }
   }
 }
 
