@@ -317,6 +317,12 @@
   }
   .event-card-wrapper {
     width: 45%;
+    .event-card {
+      overflow: hidden;
+      .event-title, .event-content .ce_text {
+        font: normal italic 900 24px/36px "Exo 2";
+      }
+    }
   }
   .events-all .mod_eventlist .event-card-wrapper {
     width: 45%;
