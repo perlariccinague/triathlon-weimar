@@ -212,22 +212,26 @@ ul {
 #main .mod_article.bg-blue-space .content-text p a {
     color: black;
     border-color: black;
-    img {
-        &:last-child {
-            opacity: 0;
-        }
-    }
     &:hover {
         color: white;
-        img {
-            &:last-child {
-                opacity: 1;
-            }
-            &:first-child {
-                opacity: 0;
-            }
-        }
     }
+}
+
+.bg-blue-space .content-text .rte p a img {
+    transition: opacity .3s ease;
+}
+
+.bg-blue-space .content-text .rte p a img:last-child {
+    position: absolute;
+    opacity: 0;
+}
+
+.bg-blue-space .content-text .rte p a:hover img:last-child {
+    opacity: 1;
+}
+
+.bg-blue-space .content-text .rte p a:hover img:first-child {
+    opacity: 0;
 }
 
 .bg-blue-space .content-text, .bg-pink-space .content-text {
