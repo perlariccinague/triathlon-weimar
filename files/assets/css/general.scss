@@ -212,8 +212,17 @@ ul {
 #main .mod_article.bg-blue-space .content-text p a {
     color: black;
     border-color: black;
+    &:last-child {
+        opacity: 0;
+    }
     &:hover {
         color: white;
+        &:last-child {
+            opacity: 1;
+        }
+        &:first-child {
+            opacity: 0;
+        }
     }
 }
 
