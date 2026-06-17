@@ -68,7 +68,7 @@
   }
 }
 
-.partner > .content-element-group > .content-element-group >.content-element-group >  .content-text {
+#main .mod_article.partner > .content-element-group > .content-element-group >.content-element-group >  .content-text {
   margin: 0;
   padding-top: 0;
   .rte p {
@@ -81,6 +81,9 @@
       padding: 0;
       border-radius: 0;
       display: flex;
+      &:hover {
+        opacity: 1;
+      }
       img {
         width: 50px;
       }
