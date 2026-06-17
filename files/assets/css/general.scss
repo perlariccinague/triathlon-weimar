@@ -223,15 +223,15 @@ ul {
 
 .bg-blue-space .content-text .rte p a img:last-child {
     position: absolute;
-    opacity: 0;
+    display: none;
 }
 
 .bg-blue-space .content-text .rte p a:hover img:last-child {
-    opacity: 1;
+    display: initial;
 }
 
 .bg-blue-space .content-text .rte p a:hover img:first-child {
-    opacity: 0;
+   display: none;
 }
 
 .bg-blue-space .content-text, .bg-pink-space .content-text {
