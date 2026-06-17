@@ -273,7 +273,7 @@ ul {
 
 
 
-#main .mod_article:not(.bg-blue-gradient, .image-teaser-block ) .content-text p a {
+#main .mod_article:not(.bg-blue-gradient, .image-teaser-block, .bg-blue-space ) .content-text p a {
     color: $blue;
     background: none;
     transition: all 250ms ease;
