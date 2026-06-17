@@ -183,8 +183,11 @@
             }
         }
     }
-    .mod_article.video-teaser, .mod_article.image-teaser-block {
+    .mod_article.video-teaser {
         height: 100vh;
+    }
+    .mod_article.image-teaser-block {
+        height: 150vh;
     }
     .mod_article.banner-box.live .content-text h2 {
         &:after {
