@@ -129,6 +129,9 @@
     width: 18%;
     display: flex;
     justify-content: end;
+    figure {
+      width: 100%;
+    }
     &:last-child {
       width: 10%;
       justify-content: end;
