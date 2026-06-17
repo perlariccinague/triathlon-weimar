@@ -218,11 +218,10 @@ ul {
 }
 
 .bg-blue-space .content-text .rte p a img {
-    transition: opacity .3s ease;
+    transition: all 500ms ease;
 }
 
 .bg-blue-space .content-text .rte p a img:last-child {
-    position: absolute;
     display: none;
 }
 
