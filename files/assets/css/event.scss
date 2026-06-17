@@ -83,7 +83,7 @@
   background-repeat: no-repeat;
 }
 
-.event-card .event-badge:has(.hsv){
+.event-card .event-badge:has(.hsv, .hsv1, .hsv2, .hsv3){
   background-image: url('/files/assets/layout/logo-hsv-blau.svg');
 }
 
