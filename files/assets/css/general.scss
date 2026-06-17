@@ -217,8 +217,11 @@ ul {
     }
 }
 
-.bg-blue-space .content-text .rte p a img {
-    transition: all 500ms ease;
+.bg-blue-space .content-text .rte p {
+    padding: 15px 0;
+    a img {
+        transition: all 500ms ease;
+    }
 }
 
 .bg-blue-space .content-text .rte p a img:last-child {
