@@ -42,6 +42,13 @@
     text-align: center;
 }
 
+.mod_article.image-teaser-block {
+    height: 75vh;
+    img {
+        object-fit: cover;
+    }
+}
+
 .mod_article.video-teaser, .mod_article.image-teaser-block {
     position: relative;
     //height: 75vh;
