@@ -100,7 +100,7 @@ ul {
     height: 50px;
     bottom: 5vw;
     right: 5vw;
-    z-index: 105;
+    z-index: 120;
     cursor: pointer;
     border-radius: 50%;
     img {
@@ -129,7 +129,7 @@ ul {
 
 .join-team-button {
     position: fixed;
-    z-index: 105;
+    z-index: 120;
     bottom: 10vh;
     right: 0;
     transform: translateY(-50%);
