@@ -4,7 +4,7 @@
   background: black;
   color: white;
   position: relative;
-  z-index: 10;
+  z-index: 110;
   margin-top: -5px;
   overflow: visible;
   .content-text {
@@ -125,7 +125,7 @@
   width: 90%;
   justify-content: space-between;
   margin: 0 0 0 auto;
-  gap: 30px;
+  gap: 50px;
   .content-image {
     width: 18%;
     display: flex;
