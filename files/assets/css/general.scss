@@ -338,6 +338,12 @@ img.emoji[alt*="flag"] {
     vertical-align: middle;
 }
 
+#eapps-instagram-feed-1 {
+    width: 90% !important;
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+}
+
 @media screen and (max-width: $mobile-width) {
     h1, h2 {
         font: normal italic 700 50px/56px 'Exo 2';
