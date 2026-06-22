@@ -173,6 +173,10 @@
   gap: 20px;
 }
 
+.hsv-home .content-element-group .partner-grid:nth-child(2) {
+  flex-direction: column;
+}
+
 .partner-item-link:hover .partner-logos {
   opacity: .7;
 }
